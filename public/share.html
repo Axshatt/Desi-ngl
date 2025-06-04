@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Share Your Anonymous Message Link</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .copy-confirmation {
+      margin-top: 10px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Share Your Anonymous Message Link</h2>
+
+  <input type="text" id="link" readonly />
+  <button onclick="copyLink()">Copy Link</button>
+  <p class="copy-confirmation" id="confirmation">Link copied to clipboard!</p>
+</div>
+
+<script>
+ 
+
+       
+        const username = localStorage.getItem("username")
+
+        
+        if (!username) {
+          document.getElementById("link").value = "No username found!";
+        } else {
+          const link = `http://localhost:3000/api/v1/${encodeURIComponent(username)}`;
+          document.getElementById("link").value = link;
+        }
+ 
+
+
+
+  // Assume the username is stored in localStorage after login
+  
+
+
+  function copyLink() {
+    const linkInput = document.getElementById("link");
+    linkInput.select();
+    document.execCommand("copy");
+
+    const confirmation = document.getElementById("confirmation");
+    confirmation.style.display = "block";
+
+    setTimeout(() => {
+      confirmation.style.display = "none";
+    }, 2000);
+  }
+</script>
+
+</body>
+</html>

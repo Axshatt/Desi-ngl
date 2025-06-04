@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Username</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .input-container {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+    <script>
+
+
+        async function usernameSend() {
+
+            const username = document.getElementById("username").value;
+            console.log(username);
+            
+
+            try {
+                const response = await axios.post("http://localhost:3000/api/v1/username", {
+                    username: username
+
+
+                })
+
+                
+
+                if(response){
+
+                    localStorage.setItem("username",username)
+                    window.location.href=`/api/v1/link/${username}`
+                } else{
+                    alert("retry")
+                }
+
+
+            } catch (error) {
+
+                res.alert(error)
+            }
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="input-container">
+        <h2>Enter Your Username</h2>
+        <input type="text" id="username" name="username" placeholder="e.g. akshat" required />
+        <br />
+        <button onclick="usernameSend()" type="submit">Submit</button>
+    </div>
+
+</body>
+
+</html>
