@@ -50,12 +50,36 @@
   </style>
 </head>
 <body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+  <script>
+    
+
+    async function message(){
+
+      const message = document.getElementById("message").value;
+      const username = localStorage.getItem("username")
+      try{
+
+        const response = await axios.post( `http://localhost:3000/api/v1/${username}`, {
+          message: message
+          
+          
+        })
+
+
+        alert("Message Sent")
+      } catch(e){
+        alert(e)
+      }
+    }
+
+  </script>
 
   <div class="message-container">
     <h2>Send an Anonymous Message</h2>
-      <textarea name="message" placeholder="Write your anonymous message here..." required></textarea>
+      <textarea name="message" id="message" placeholder="Write your anonymous message here..." required></textarea>
       <br />
-      <button type="submit">Send</button>
+      <button onclick="message()" type="submit">Send</button>
   </div>
 
 </body>

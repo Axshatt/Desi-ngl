@@ -1,24 +1,28 @@
 const express = require("express")
-const mongoose = require("mongoose")
 const adminRoute = express.Router()
 const {messageModal} = require("../db")
-const jwt = require("jsonwebtoken")
+const path = require("path");
+
 const { adminAuth } = require("../middlewares/adminAuth")
 
-adminRoute.get("/message/:user",adminAuth, async function(req,res){
-    const {message} = req.body;
-    const username = req.params.user;
+adminRoute.post("/message/:user", async function(req,res){
+    const user = req.params.user;
+    const userId = req.userId
 
-    await messageModal.find({
-        username
+    const messages= await messageModal.find({
+        userId
     })
 
     res.send({
-        msg:message
+        messages
     })
 
 
 
+})
+
+adminRoute.get("/message/:user",function(req,res){
+      res.sendFile(path.join(__dirname, "..", "public", "adminConf.html"));
 })
 
 

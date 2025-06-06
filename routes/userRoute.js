@@ -13,47 +13,26 @@ userRoute.post("/username",async function(req,res){
     },process.env.JWT_PASS)//will save the jwt in the browser localStorage and verify when the user wants to read the confessions of him 
 
 
-    await userModal.create({
-        username
+    const user = await userModal.create({
+        username,
+
     })
-
-
-    res.set({
-       'token': token,
-     });
+    req.userId = user._id;
+    
      res.send({
-        msg:"user created",
+        token
            
      })
 
 
 })
 
-userRoute.get("/message",function(req,res){
+userRoute.get("/:username",function(req,res){
     res.sendFile(path.join(__dirname, "..", "public", "message.html"));
 })
 
 userRoute.get("/link/:username",function(req,res){
     res.sendFile(path.join(__dirname, "..", "public", "share.html"));
-})
-
-userRoute.post("/:username",async function(req,res){
-    const {message} = req.body;
-    const username = req.body.params;
-
-
-
-    
-
-    
-    await messageModal.create({
-        message,
-    })
-
-    res.send({
-        msg:message
-    })
-
 })
 
 userRoute.post("/link/:username",function(req,res){
@@ -65,22 +44,26 @@ userRoute.post("/link/:username",function(req,res){
 })
 
 
-userRoute.post("/message",async function(req,res){
+userRoute.post("/:username",async function(req,res){
     const {message} = req.body;
-    const username = localStorage.getItem("username")
+    const userId= req.userId;
+    const username = req.params.username;
+
+    const users = await userModal.find({
+        userId
+    })
+
 
     
     await messageModal.create({
         message,
+        userId:userId
     })
 
     res.send({
         msg:message
     })
 
-})
-userRoute.get("/:username",function(req,res){
-     res.sendFile(path.join(__dirname, "..", "public", "message.html"));
 })
 
 

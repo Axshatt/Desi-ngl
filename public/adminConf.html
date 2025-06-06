@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymous Confessions</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Anonymous Confessions 💌</h1>
+        <div id="confession-list" class="confessions"></div>
+    </div>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .confession {
+            background: #f1f1f1;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #444;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+    <script>
+        const username = localStorage.getItem("username")
+        // Fetch confessions from the backend
+        async function fetchConfessions() {
+            try {
+                const response = await axios.post(`/api/v1/admin/message/${username}`);
+
+                const container = document.getElementById('confession-list');
+                container.innerHTML = ''; // Clear old messages
+
+                const data = response.data.messages; // ✅ updated this line
+
+                if (!Array.isArray(data) || data.length === 0) {
+                    container.innerHTML = '<p>No confessions yet!</p>';
+                    return;
+                }
+
+                data.forEach(confession => {
+                    const div = document.createElement('div');
+                    div.className = 'confession';
+                    div.innerText = confession.message;
+                    container.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Failed to fetch confessions:', error);
+            }
+        }
+
+
+
+        // Call the function on page load
+        window.onload = fetchConfessions;
+
+    </script>
+</body>
+
+</html>

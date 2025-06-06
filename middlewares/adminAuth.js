@@ -1,12 +1,14 @@
 const jwt = require("jsonwebtoken")
-require('dotenv').config
+require('dotenv').config()
 function adminAuth(req,res,next){
-    const token = req.body.headers;
-
+    const token = req.headers.token
+    //  const token = req.token
+    console.log(token);
+    
     const decoded = jwt.verify(token,process.env.JWT_PASS)
     
     if(decoded){
-        const userId = req.decoded
+        req.userId = decoded.username
         next()
     } else{
         res.send({

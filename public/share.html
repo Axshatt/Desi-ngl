@@ -7,18 +7,46 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      height: 100vh;
+      background-color: #007bff;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .navbar button {
+      background-color: #ffffff;
+      color: #007bff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .navbar button:hover {
+      background-color: #e6e6e6;
     }
 
     .container {
-      text-align: center;
+      max-width: 500px;
+      margin: 80px auto;
       background-color: #ffffff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     h2 {
@@ -34,7 +62,7 @@
       margin-bottom: 10px;
     }
 
-    button {
+    button.copy-btn {
       padding: 10px 20px;
       font-size: 16px;
       background-color: #007bff;
@@ -44,7 +72,7 @@
       cursor: pointer;
     }
 
-    button:hover {
+    button.copy-btn:hover {
       background-color: #0056b3;
     }
 
@@ -57,48 +85,53 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Share Your Anonymous Message Link</h2>
+  <div class="navbar">
+    <h1>Anonymous Confession</h1>
+    <div>
+      <button onclick="goToConfessions()">All Confessions</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
 
-  <input type="text" id="link" readonly />
-  <button onclick="copyLink()">Copy Link</button>
-  <p class="copy-confirmation" id="confirmation">Link copied to clipboard!</p>
-</div>
+  <div class="container">
+    <h2>Share Your Anonymous Message Link</h2>
+    <input type="text" id="link" readonly />
+    <button class="copy-btn" onclick="copyLink()">Copy Link</button>
+    <p class="copy-confirmation" id="confirmation">Link copied to clipboard!</p>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+  <script>
+    const username = localStorage.getItem("username");
 
-<script>
- 
+    if (!username) {
+      document.getElementById("link").value = "No username found!";
+    } else {
+      const link = `http://localhost:3000/api/v1/${encodeURIComponent(username)}`;
+      document.getElementById("link").value = link;
+    }
 
-       
-        const username = localStorage.getItem("username")
+    function copyLink() {
+      const linkInput = document.getElementById("link");
+      linkInput.select();
+      document.execCommand("copy");
 
-        
-        if (!username) {
-          document.getElementById("link").value = "No username found!";
-        } else {
-          const link = `http://localhost:3000/api/v1/${encodeURIComponent(username)}`;
-          document.getElementById("link").value = link;
-        }
- 
+      const confirmation = document.getElementById("confirmation");
+      confirmation.style.display = "block";
 
+      setTimeout(() => {
+        confirmation.style.display = "none";
+      }, 2000);
+    }
 
+    function logout() {
+      localStorage.clear();
+      window.location.href = "/api/v1"; // Update this if your login page is different
+    }
 
-  // Assume the username is stored in localStorage after login
-  
-
-
-  function copyLink() {
-    const linkInput = document.getElementById("link");
-    linkInput.select();
-    document.execCommand("copy");
-
-    const confirmation = document.getElementById("confirmation");
-    confirmation.style.display = "block";
-
-    setTimeout(() => {
-      confirmation.style.display = "none";
-    }, 2000);
-  }
-</script>
+    function goToConfessions() {
+      window.location.href = `/api/v1/admin/message/${username}`; // Update this to the actual admin page path
+    }
+  </script>
 
 </body>
 </html>

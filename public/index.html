@@ -52,17 +52,21 @@
             
 
             try {
-                const response = await axios.post("http://localhost:3000/api/v1/username", {
+                const response = await axios.post("/api/v1/username", {
                     username: username
 
 
                 })
+                
+                
 
                 
 
+                
                 if(response){
-
+                    console.log(response.data.token);
                     localStorage.setItem("username",username)
+                    localStorage.setItem("token",response.data.token)
                     window.location.href=`/api/v1/link/${username}`
                 } else{
                     alert("retry")

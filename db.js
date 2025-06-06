@@ -11,7 +11,8 @@ const user = new Schema({
     username:String,
 })
 const message = new Schema({
-    message:String
+    message:String,
+    userId:ObjectId
 })
 
 const userModal  = mongoose.model("users",user); 
