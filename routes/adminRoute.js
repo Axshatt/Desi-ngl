@@ -1,18 +1,25 @@
 const express = require("express")
 const adminRoute = express.Router()
-const {messageModal} = require("../db")
+const {messageModal, userModal} = require("../db")
 const path = require("path");
 
 const { adminAuth } = require("../middlewares/adminAuth")
 
 adminRoute.post("/message/:user", async function(req,res){
     const user = req.params.user;
-    const userId = req.userId
+      const users = await userModal.findOne({
+        username:user
+    })
+
+    const userId = users._id
+    console.log(userId);
+    
 
     const messages= await messageModal.find({
         userId
     })
-
+    console.log(messages);
+    
     res.send({
         messages
     })

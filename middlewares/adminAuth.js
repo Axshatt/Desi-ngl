@@ -8,7 +8,7 @@ function adminAuth(req,res,next){
     const decoded = jwt.verify(token,process.env.JWT_PASS)
     
     if(decoded){
-        req.userId = decoded.username
+        req.username = decoded.username
         next()
     } else{
         res.send({

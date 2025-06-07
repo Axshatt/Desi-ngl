@@ -18,6 +18,8 @@ userRoute.post("/username",async function(req,res){
 
     })
     req.userId = user._id;
+    console.log(req.userId);
+    
     
      res.send({
         token
@@ -46,12 +48,15 @@ userRoute.post("/link/:username",function(req,res){
 
 userRoute.post("/:username",async function(req,res){
     const {message} = req.body;
-    const userId= req.userId;
     const username = req.params.username;
 
-    const users = await userModal.find({
-        userId
+    const user = await userModal.findOne({
+        username
     })
+
+    const userId = user._id
+    console.log(userId);
+    
 
 
     
