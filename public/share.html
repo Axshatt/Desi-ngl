@@ -106,7 +106,7 @@
     if (!username) {
       document.getElementById("link").value = "No username found!";
     } else {
-      const link = `http://localhost:3000/api/v1/${encodeURIComponent(username)}`;
+      const link = `/api/v1/${encodeURIComponent(username)}`;
       document.getElementById("link").value = link;
     }
 

@@ -60,7 +60,7 @@
       const username = localStorage.getItem("username")
       try{
 
-        const response = await axios.post( `http://localhost:3000/api/v1/${username}`, {
+        const response = await axios.post( `/api/v1/${username}`, {
           message: message
           
           

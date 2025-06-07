@@ -15,7 +15,7 @@ adminRoute.post("/message/:user", async function(req,res){
     console.log(userId);
     
 
-    const messages= await messageModal.find({
+    const messages= await messageModal.find({ 
         userId
     })
     console.log(messages);
