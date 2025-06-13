@@ -49,7 +49,7 @@
         // Fetch confessions from the backend
         async function fetchConfessions() {
             try {
-                const response = await axios.post(`/api/v1/admin/message/${username}`);
+                const response = await axios.post(`/admin/message/${username}`);
 
                 const container = document.getElementById('confession-list');
                 container.innerHTML = ''; // Clear old messages

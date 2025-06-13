@@ -106,7 +106,7 @@
     if (!username) {
       document.getElementById("link").value = "No username found!";
     } else {
-      const link = `https://desi-ngl.onrender.com/api/v1/${encodeURIComponent(username)}`;
+      const link = `https://desi-ngl.onrender.com/${encodeURIComponent(username)}`;
       document.getElementById("link").value = link;
     }
 
@@ -125,11 +125,11 @@
 
     function logout() {
       localStorage.clear();
-      window.location.href = "/api/v1"; // Update this if your login page is different
+      window.location.href = "/"; // Update this if your login page is different
     }
 
     function goToConfessions() {
-      window.location.href = `/api/v1/admin/message/${username}`; // Update this to the actual admin page path
+      window.location.href = `/admin/message/${username}`; // Update this to the actual admin page path
     }
   </script>
 
