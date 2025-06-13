@@ -14,13 +14,11 @@ adminRoute.post("/message/:user", async function(req,res){
   return res.status(404).json({ message: "User not found" });
 }
     const userId = users._id
-    console.log(userId);
     
 
     const messages= await messageModal.find({ 
         userId
     })
-    console.log(messages);
     
     res.send({
         messages

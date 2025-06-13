@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Send Anonymous Message</title>
   <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --text-color: #111;
+      --box-bg: #ffffff;
+      --btn-bg: #007bff;
+      --btn-hover: #218838;
+    }
+
+    body.dark-mode {
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --box-bg: #1e293b;
+      --btn-bg: #334155;
+      --btn-hover: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .message-container {
-      background-color: #ffffff;
+      background-color: var(--box-bg);
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-      text-align: center;
       width: 90%;
       max-width: 400px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .message-container h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
 
     textarea {
@@ -31,56 +61,138 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       resize: none;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     button {
       margin-top: 15px;
       padding: 10px 25px;
-      background-color: #28a745;
+      background-color: var(--btn-bg);
       border: none;
       color: white;
       font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
     }
 
     button:hover {
-      background-color: #218838;
+      background-color: var(--btn-hover);
+    }
+
+    .theme-toggle {
+      position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-size: 1rem;
+            max-width: fit-content;;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+
+    @media (max-width: 480px) {
+      .message-container {
+        padding: 20px;
+      }
+
+      .message-container h2 {
+        font-size: 1.2rem;
+      }
+
+      textarea {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .theme-toggle {
+        font-size: 0.9rem;
+        padding: 4px 10px;
+      }
     }
   </style>
 </head>
 <body>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
-  <script>
-    
 
-    async function message(){
-
-      const message = document.getElementById("message").value;
-      const username = localStorage.getItem("username")
-      try{
-
-        const response = await axios.post( `/${username}`, {
-          message: message
-          
-          
-        })
-
-
-        alert("Message Sent")
-      } catch(e){
-        alert(e)
-      }
-    }
-
-  </script>
+  <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+  </button>
 
   <div class="message-container">
     <h2>Send an Anonymous Message</h2>
-      <textarea name="message" id="message" placeholder="Write your anonymous message here..." required></textarea>
-      <br />
-      <button onclick="message()" type="submit">Send</button>
+    <textarea name="message" id="message" placeholder="Write your anonymous message here..." required></textarea>
+    <button onclick="message()" type="submit">Send</button>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+  <script>
+    async function message() {
+      const message = document.getElementById("message").value;
+      const username = localStorage.getItem("username");
+      if (!message.trim()) return alert("Please enter a message.");
+
+      try {
+        await axios.post(`/${username}`, { message });
+        alert("Message Sent");
+        document.getElementById("message").value = "";
+      } catch (e) {
+        alert("Error: " + (e?.response?.data?.error || e.message));
+      }
+    }
+
+    // Theme toggle logic
+    const iconSpan = document.getElementById("theme-icon");
+
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("dark-mode");
+
+      iconSpan.style.opacity = 0;
+
+      setTimeout(() => {
+        if (isDark) {
+          body.classList.remove("dark-mode");
+          iconSpan.textContent = "🌙";
+          localStorage.setItem("theme", "light");
+        } else {
+          body.classList.add("dark-mode");
+          iconSpan.textContent = "🌞";
+          localStorage.setItem("theme", "dark");
+        }
+        iconSpan.style.opacity = 1;
+      }, 200);
+    }
+
+    // Load theme on page load
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        iconSpan.textContent = "🌞";
+      } else {
+        iconSpan.textContent = "🌙";
+      }
+    };
+  </script>
 </body>
 </html>

@@ -2,123 +2,267 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anonymous Confessions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonymous Confessions</title>
+
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --text-color: #111;
+      --box-bg: #ffffff;
+      --confession-bg: #f1f1f1;
+      --navbar-bg: #007bff;
+      --navbar-btn-color: #007bff;
+      --navbar-btn-bg: #ffffff;
+      --navbar-btn-hover: #e6e6e6;
+    }
+
+    body.dark-mode {
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --box-bg: #1e293b;
+      --confession-bg: #334155;
+      --navbar-bg: #1e293b;
+      --navbar-btn-color: #f1f5f9;
+      --navbar-btn-bg: #334155;
+      --navbar-btn-hover: #475569;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--navbar-bg);
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .navbar button {
+      background-color: var(--navbar-btn-bg);
+      color: var(--navbar-btn-color);
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar button:hover {
+      background-color: var(--navbar-btn-hover);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: var(--box-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--text-color);
+    }
+
+ 
+.confession {
+  background-color: var(--confession-bg);
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--text-color);
+  word-wrap: break-word; /* Force wrap long words */
+  overflow-wrap: break-word;
+  white-space: pre-wrap; /* Preserve spacing and wraps */
+}
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar-bg);
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+  @media (max-width: 600px) {
+      .container {
+        margin: 40px 20px;
+        padding: 20px;
+      }
+    }
+
+.theme-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .theme-toggle {
+    padding: 4px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
 </head>
 
 <body>
-    <div class="navbar">
-        <h1>Anonymous Confession</h1>
-        <div>
-            <button onclick="goToConfessions()">All Confessions</button>
-            <button onclick="logout()">Logout</button>
-        </div>
-    </div>
-    <div class="container">
-        <h1>Anonymous Confessions 💌</h1>
-        <div id="confession-list" class="confessions"></div>
-    </div>
-    <style>
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #007bff;
-            padding: 10px 20px;
-            color: white;
+ 
+
+  <div class="navbar">
+  <h1>Desi NGL</h1>
+  <div class="nav-buttons">
+    <button onclick="goToConfessions()">All Confessions</button>
+    <button onclick="logout()">Logout</button>
+    <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </div>
+</div>
+
+
+  <div class="container">
+    <h1>Anonymous Confessions 💌</h1>
+    <div id="confession-list" class="confessions"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+  <script>
+    const username = localStorage.getItem("username");
+
+    async function fetchConfessions() {
+      try {
+        const response = await axios.post(`/admin/message/${username}`);
+        const container = document.getElementById('confession-list');
+        container.innerHTML = '';
+
+        const data = response.data.messages;
+        if (!Array.isArray(data) || data.length === 0) {
+          container.innerHTML = '<p>No confessions yet!</p>';
+          return;
         }
 
-        .navbar h1 {
-            margin: 0;
-            font-size: 20px;
+        data.forEach(confession => {
+          const div = document.createElement('div');
+          div.className = 'confession';
+          div.innerText = confession.message;
+          container.appendChild(div);
+        });
+      } catch (error) {
+        console.error('Failed to fetch confessions:', error);
+      }
+    }
+
+    function goToConfessions() {
+      window.location.href = `/admin/message/${username}`;
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "/";
+    }
+
+    // Dark Mode Toggle Logic
+    const iconSpan = document.getElementById("theme-icon");
+
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("dark-mode");
+
+      iconSpan.style.opacity = 0;
+
+      setTimeout(() => {
+        if (isDark) {
+          body.classList.remove("dark-mode");
+          iconSpan.textContent = "🌙";
+          localStorage.setItem("theme", "light");
+        } else {
+          body.classList.add("dark-mode");
+          iconSpan.textContent = "🌞";
+          localStorage.setItem("theme", "dark");
         }
 
-        .navbar button {
-            background-color: #ffffff;
-            color: #007bff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
+        iconSpan.style.opacity = 1;
+      }, 200);
+    }
 
-        .navbar button:hover {
-            background-color: #e6e6e6;
-        }
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        iconSpan.textContent = "🌞";
+      } else {
+        iconSpan.textContent = "🌙";
+      }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .confession {
-            background: #f1f1f1;
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 16px;
-            color: #444;
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
-    <script>
-        const username = localStorage.getItem("username")
-        // Fetch confessions from the backend
-        async function fetchConfessions() {
-            try {
-                const response = await axios.post(`/admin/message/${username}`);
-
-                const container = document.getElementById('confession-list');
-                container.innerHTML = ''; // Clear old messages
-
-                const data = response.data.messages; // ✅ updated this line
-
-                if (!Array.isArray(data) || data.length === 0) {
-                    container.innerHTML = '<p>No confessions yet!</p>';
-                    return;
-                }
-
-                data.forEach(confession => {
-                    const div = document.createElement('div');
-                    div.className = 'confession';
-                    div.innerText = confession.message;
-                    container.appendChild(div);
-                });
-            } catch (error) {
-                console.error('Failed to fetch confessions:', error);
-            }
-        }
-        function goToConfessions() {
-            window.location.href = `/admin/message/${username}`; // Update this to the actual admin page path
-        }
-        function logout() {
-            localStorage.clear();
-            window.location.href = "/"; // Update this if your login page is different
-        }
-
-
-        // Call the function on page load
-        window.onload = fetchConfessions;
-
-    </script>
+      fetchConfessions();
+    };
+  </script>
 </body>
 
 </html>

@@ -2,22 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Share Your Anonymous Message Link</title>
   <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #111;
+      --input-bg: #ffffff;
+      --btn-bg: #007bff;
+      --btn-hover: #0056b3;
+      --box-bg: #ffffff;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      --bg-color: #0f172a;
+      --text-color: #f1f5f9;
+      --input-bg: #334155;
+      --btn-bg: #3b82f6;
+      --btn-hover: #2563eb;
+      --box-bg: #1e293b;
     }
 
     .navbar {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      background-color: #007bff;
+      background-color: var(--btn-bg);
       padding: 10px 20px;
       color: white;
+      transition: background-color 0.3s;
     }
 
     .navbar h1 {
@@ -27,12 +50,14 @@
 
     .navbar button {
       background-color: #ffffff;
-      color: #007bff;
+      color: var(--btn-bg);
       border: none;
       padding: 8px 12px;
       border-radius: 5px;
       cursor: pointer;
       margin-left: 10px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
     }
 
     .navbar button:hover {
@@ -42,54 +67,122 @@
     .container {
       max-width: 500px;
       margin: 80px auto;
-      background-color: #ffffff;
+      background-color: var(--box-bg);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       text-align: center;
+      transition: background-color 0.3s;
     }
 
     h2 {
       margin-bottom: 20px;
+      font-size: 1.4rem;
     }
 
     input[type="text"] {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
     }
 
     button.copy-btn {
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #007bff;
+      background-color: var(--btn-bg);
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     button.copy-btn:hover {
-      background-color: #0056b3;
+      background-color: var(--btn-hover);
     }
 
-    .copy-confirmation {
-      margin-top: 10px;
-      color: green;
-      display: none;
+    /* Toast Styles */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #22c55e;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: white;
+      color: var(--btn-bg);
+    }
+
+    #theme-icon {
+      transition: opacity 0.3s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        margin: 40px 20px;
+        padding: 20px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar h1 {
+        margin-bottom: 10px;
+      }
+
+      .navbar button {
+        margin-top: 5px;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="navbar">
-    <h1>Anonymous Confession</h1>
+    <h1>Desi NGL</h1>
     <div>
       <button onclick="goToConfessions()">All Confessions</button>
       <button onclick="logout()">Logout</button>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+      </button>
     </div>
   </div>
 
@@ -97,11 +190,14 @@
     <h2>Share Your Anonymous Message Link</h2>
     <input type="text" id="link" readonly />
     <button class="copy-btn" onclick="copyLink()">Copy Link</button>
-    <p class="copy-confirmation" id="confirmation">Link copied to clipboard!</p>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+
+  <div class="toast" id="toast">Link copied to clipboard!</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
   <script>
     const username = localStorage.getItem("username");
+    const toast = document.getElementById("toast");
 
     if (!username) {
       document.getElementById("link").value = "No username found!";
@@ -115,22 +211,49 @@
       linkInput.select();
       document.execCommand("copy");
 
-      const confirmation = document.getElementById("confirmation");
-      confirmation.style.display = "block";
-
+      toast.classList.add("show");
       setTimeout(() => {
-        confirmation.style.display = "none";
+        toast.classList.remove("show");
       }, 2000);
     }
 
     function logout() {
       localStorage.clear();
-      window.location.href = "/"; // Update this if your login page is different
+      window.location.href = "/";
     }
 
     function goToConfessions() {
-      window.location.href = `/admin/message/${username}`; // Update this to the actual admin page path
+      window.location.href = `/admin/message/${username}`;
     }
+
+    // Theme toggle logic
+    const iconSpan = document.getElementById("theme-icon");
+
+    function toggleTheme() {
+      const isDark = document.body.classList.contains("dark-mode");
+      iconSpan.style.opacity = 0;
+
+      setTimeout(() => {
+        if (isDark) {
+          document.body.classList.remove("dark-mode");
+          iconSpan.textContent = "🌙";
+          localStorage.setItem("theme", "light");
+        } else {
+          document.body.classList.add("dark-mode");
+          iconSpan.textContent = "🌞";
+          localStorage.setItem("theme", "dark");
+        }
+        iconSpan.style.opacity = 1;
+      }, 200);
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        iconSpan.textContent = "🌞";
+      }
+    };
   </script>
 
 </body>

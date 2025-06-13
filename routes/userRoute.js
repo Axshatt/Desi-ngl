@@ -18,7 +18,7 @@ userRoute.post("/username",async function(req,res){
 
     })
     req.userId = user._id;
-    console.log(req.userId);
+
     
     
      res.send({
@@ -54,9 +54,7 @@ userRoute.post("/:username",async function(req,res){
         username
     })
 
-    const userId = user._id
-    console.log(userId);
-    
+    const userId = user._id;    
 
 
     
