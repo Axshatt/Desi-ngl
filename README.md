@@ -96,7 +96,7 @@ MONGO_URL=your_mongodb_connection_url
 node backend/main.js
 ```
 
-The app will start on: `http://localhost:3000`
+The app will start on: `http://localhost:3000/api/v1`
 
 ---
 
