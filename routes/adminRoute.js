@@ -10,7 +10,9 @@ adminRoute.post("/message/:user", async function(req,res){
       const users = await userModal.findOne({
         username:user
     })
-
+    if (!users) {
+  return res.status(404).json({ message: "User not found" });
+}
     const userId = users._id
     console.log(userId);
     
