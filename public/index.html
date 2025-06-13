@@ -2,96 +2,263 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Enter Username</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desi-NGL| Login </title>
 
-        .input-container {
-            text-align: center;
-        }
+  <style>
+    :root {
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --input-bg: #ffffff;
+  --btn-bg: #007bff;
+  --btn-hover: #0056b3;
+  --box-bg: #ffffff;
+}
 
-        input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            width: 250px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+body.dark-mode {
+  --bg-color: #0f172a;     /* Deep slate background */
+  --text-color: #f1f5f9;   /* Light slate text */
+  --input-bg: #334155;     /* Muted input background */
+  --btn-bg: #3b82f6;       /* Vibrant blue */
+  --btn-hover: #2563eb;    /* Stronger blue on hover */
+  --box-bg: #1e293b;       /* Container/card background */
+}
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
 
-        button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+body.dark-mode input[type="text"] {
+  border: 1px solid #475569;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
 
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
-    <script>
-
-        async function usernameSend() {
-
-            const username = document.getElementById("username").value;
-            console.log(username);
-            
-
-            try {
-                const response = await axios.post(`/username`, {
-                    username: username
+body.dark-mode button {
+  color: #f1f5f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
 
 
-                })
-                
-                
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-                
+    .input-container {
+      background: var(--box-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
 
-                
-                if(response){
-                    console.log(response.data.token);
-                    localStorage.setItem("username",username)
-                    localStorage.setItem("token",response.data.token)
-                    window.location.href=`/link/${username}`
-                } else{
-                    alert("retry")
-                }
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      box-sizing: border-box;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: var(--btn-bg);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--btn-hover);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+    .theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+#theme-icon {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--btn-bg);
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+}
+
+/* Input Shadow */
+input[type="text"] {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+body.dark-mode input[type="text"] {
+  border: 1px solid #374151;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Button Shadow */
+button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+body, input, button {
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
 
 
-            } catch (error) {
+  </style>
 
-                alert(error)
-            }
-
-        }
-
-
-
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
 </head>
 
 <body>
+ <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">
+  <span id="theme-icon">🌙</span>
+</button>
 
-    <div class="input-container">
-        <h2>Enter Your Username</h2>
-        <input type="text" id="username" name="username" placeholder="e.g. akshat" required />
-        <br />
-        <button onclick="usernameSend()" type="submit">Submit</button>
-    </div>
+
+  <div class="input-container">
+    <h1>Welcome</h1>
+    <h2>Enter Your Instagram's Username</h2>
+    <input type="text" id="username" name="username" placeholder="e.g. akshat" required />
+    <br />
+    <button onclick="usernameSend()" type="submit">Submit</button>
+  </div>
+<script>
+ const toggleBtn = document.getElementById("theme-toggle-btn");
+const iconSpan = document.getElementById("theme-icon");
+
+function toggleTheme() {
+  const body = document.body;
+  const isDark = body.classList.contains("dark-mode");
+
+  // Fade out icon
+  iconSpan.style.opacity = 0;
+
+  setTimeout(() => {
+    if (isDark) {
+      body.classList.remove("dark-mode");
+      iconSpan.textContent = "🌙";
+      localStorage.setItem("theme", "light");
+    } else {
+      body.classList.add("dark-mode");
+      iconSpan.textContent = "🌞";
+      localStorage.setItem("theme", "dark");
+    }
+
+    // Fade in
+    iconSpan.style.opacity = 1;
+  }, 200);
+}
+
+window.onload = () => {
+  const savedTheme = localStorage.getItem("theme");
+  const isDark = savedTheme === "dark";
+
+  if (isDark) {
+    document.body.classList.add("dark-mode");
+    iconSpan.textContent = "🌞";
+  } else {
+    iconSpan.textContent = "🌙";
+  }
+};
+
+
+  async function usernameSend() {
+    const username = document.getElementById("username").value.trim();
+    if (!username) {
+      alert("Please enter a username.");
+      return;
+    }
+
+    try {
+      const response = await axios.post(`/username`, { username });
+      if (response) {
+        localStorage.setItem("username", username);
+        localStorage.setItem("token", response.data.token);
+        window.location.href = `/link/${username}`;
+      } else {
+        alert("Please try again.");
+      }
+    } catch (error) {
+      alert("Error: " + error);
+    }
+  }
+</script>
 
 </body>
 
