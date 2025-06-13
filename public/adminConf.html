@@ -8,11 +8,46 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <h1>Anonymous Confession</h1>
+        <div>
+            <button onclick="goToConfessions()">All Confessions</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
     <div class="container">
         <h1>Anonymous Confessions 💌</h1>
         <div id="confession-list" class="confessions"></div>
     </div>
     <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .navbar button {
+            background-color: #ffffff;
+            color: #007bff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .navbar button:hover {
+            background-color: #e6e6e6;
+        }
+
         body {
             font-family: 'Segoe UI', sans-serif;
             background: #f8f9fa;
@@ -71,7 +106,13 @@
                 console.error('Failed to fetch confessions:', error);
             }
         }
-
+        function goToConfessions() {
+            window.location.href = `/admin/message/${username}`; // Update this to the actual admin page path
+        }
+        function logout() {
+            localStorage.clear();
+            window.location.href = "/"; // Update this if your login page is different
+        }
 
 
         // Call the function on page load
