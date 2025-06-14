@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Send Anonymous Message</title>
   <style>
     :root {
@@ -42,7 +43,7 @@
       background-color: var(--box-bg);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       width: 90%;
       max-width: 400px;
       transition: background-color 0.3s, color 0.3s;
@@ -85,21 +86,22 @@
 
     .theme-toggle {
       position: absolute;
-            top: 1rem;
-            right: 1rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: none;
-            border: 2px solid var(--text-color);
-            color: var(--text-color);
-            padding: 6px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            white-space: nowrap;
-            font-size: 1rem;
-            max-width: fit-content;;
+      top: 1rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+      font-size: 1rem;
+      max-width: fit-content;
+      ;
     }
 
     .theme-toggle:hover {
@@ -132,6 +134,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">
@@ -148,7 +151,11 @@
   <script>
     async function message() {
       const message = document.getElementById("message").value;
-      const username = localStorage.getItem("username");
+      const url = new URL(window.location.href);
+      const pathnameParts = url.pathname.split("/");
+      const username = pathnameParts[1];
+      console.log("Username:", username);
+      // const username = localStorage.getItem("username");
       if (!message.trim()) return alert("Please enter a message.");
 
       try {
@@ -195,4 +202,5 @@
     };
   </script>
 </body>
+
 </html>
