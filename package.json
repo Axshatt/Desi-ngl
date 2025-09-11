@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./backend/main",
+    "build": "node ./backend/main",
     "dev": "nodemon ./backend/main"
   },
   "keywords": [],
