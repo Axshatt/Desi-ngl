@@ -159,7 +159,7 @@
       if (!message.trim()) return alert("Please enter a message.");
 
       try {
-        await axios.post(`/${username}`, { message });
+        await axios.post(`https://desi-ngl.onrender.com/${username}`, { message });
         alert("Message Sent");
         document.getElementById("message").value = "";
       } catch (e) {
