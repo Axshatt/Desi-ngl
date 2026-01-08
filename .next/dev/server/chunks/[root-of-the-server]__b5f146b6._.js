@@ -31,22 +31,12 @@ const messageSchema = new Schema({
     message: String,
     userId: ObjectId
 });
-const subscriptionSchema = new Schema({
-    username: String,
-    endpoint: String,
-    keys: {
-        p256dh: String,
-        auth: String
-    }
-});
 // Prevent model overwrite error in dev mode
 const userModal = mongoose.models.users || mongoose.model("users", userSchema);
 const messageModal = mongoose.models.messages || mongoose.model("messages", messageSchema);
-const subscriptionModal = mongoose.models.subscriptions || mongoose.model("subscriptions", subscriptionSchema);
 module.exports = {
     userModal,
-    messageModal,
-    subscriptionModal
+    messageModal
 };
 }),
 "[project]/Desi-Ngl/pages/api/username.js [api] (ecmascript)", ((__turbopack_context__) => {

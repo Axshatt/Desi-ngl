@@ -6,5 +6,7 @@
   "/admin/message/[username]": "pages/admin/message/[username].js",
   "/api/[username]": "pages/api/[username].js",
   "/api/admin/auto-message": "pages/api/admin/auto-message.js",
-  "/api/admin/message/[user]": "pages/api/admin/message/[user].js"
+  "/api/admin/message/[user]": "pages/api/admin/message/[user].js",
+  "/api/username": "pages/api/username.js",
+  "/link/[username]": "pages/link/[username].js"
 }

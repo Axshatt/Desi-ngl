@@ -1,0 +1,14 @@
+{
+  "/": "pages/index.html",
+  "/[username]": "pages/[username].html",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/admin/message/[username]": "pages/admin/message/[username].html",
+  "/api/[username]": "pages/api/[username].js",
+  "/api/admin/auto-message": "pages/api/admin/auto-message.js",
+  "/api/admin/message/[user]": "pages/api/admin/message/[user].js",
+  "/api/username": "pages/api/username.js",
+  "/link/[username]": "pages/link/[username].html",
+  "/404": "pages/404.html"
+}
