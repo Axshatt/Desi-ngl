@@ -1,16 +1,16 @@
 const express = require("express")
 const jwt = require("jsonwebtoken")
 const path = require("path");
-const  userRoute = express.Router()
-const {userModal,messageModal} = require("../db");
+const userRoute = express.Router()
+const { userModal, messageModal } = require("../db");
 require('dotenv').config()
 
 
-userRoute.post("/username",async function(req,res){
+userRoute.post("/username", async function (req, res) {
     const username = req.body.username;
     const token = jwt.sign({
         username
-    },process.env.JWT_PASS)//will save the jwt in the browser localStorage and verify when the user wants to read the confessions of him 
+    }, process.env.JWT_PASS)//will save the jwt in the browser localStorage and verify when the user wants to read the confessions of him 
 
 
     const user = await userModal.create({
@@ -18,26 +18,28 @@ userRoute.post("/username",async function(req,res){
 
     })
     req.userId = user._id;
+    console.log(req.userId);
+    
 
-    
-    
-     res.send({
+
+
+    res.send({
         token
-           
-     })
+
+    })
 
 
 })
 
-userRoute.get("/:username",function(req,res){
+userRoute.get("/:username", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "public", "message.html"));
 })
 
-userRoute.get("/link/:username",function(req,res){
+userRoute.get("/link/:username", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "public", "share.html"));
 })
 
-userRoute.post("/link/:username",function(req,res){
+userRoute.post("/link/:username", function (req, res) {
     const username = req.params.username;
 
     res.send({
@@ -46,35 +48,37 @@ userRoute.post("/link/:username",function(req,res){
 })
 
 
-userRoute.post("/:username",async function(req,res){
-    const {message} = req.body;
+userRoute.post("/:username", async function (req, res) {
+    const { message } = req.body;
     const username = req.params.username;
 
-    const user = await userModal.findOne({
-        username
-    })
+    const user = await userModal.findOne({ username });
 
-    const userId = user._id;    
-
-
+    if (!user) {
+        return res.status(404).json({
+            error: "User not found"
+        });
+    }
+    console.log(user);
     
+    const userId = user._id;
+
     await messageModal.create({
         message,
-        userId:userId
-    })
+        userId: userId
+    });
 
     res.send({
-        msg:message
-    })
+        msg: message
+    });
+});
 
+
+userRoute.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 })
 
 
-userRoute.get("/",function(req,res){
-     res.sendFile(path.join(__dirname, "..", "public", "index.html"));
-})
-
-
-module.exports={
+module.exports = {
     userRoute
 }

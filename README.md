@@ -1,3 +1,44 @@
+# Desi-Ngl (Next.js migration)
+
+This repository was migrated from a small Express app to a Next.js app with equivalent behavior.
+
+What changed
+- Frontend pages converted to Next.js pages under `pages/`.
+- Backend endpoints converted to Next.js API routes under `pages/api/`.
+- Keep `db.js` (Mongoose models) — API routes use it directly.
+
+Environment
+You need a `.env` file in the project root with at least:
+
+- DATABASE=<your-mongodb-connection-string>
+- JWT_PASS=<a-secret-for-signing-jwt>
+
+Run locally
+1. Install dependencies:
+
+```powershell
+npm install
+```
+
+2. Run dev server:
+
+```powershell
+npm run dev
+```
+
+App routes
+- / -> home page (create username)
+- /link/[username] -> share link page
+- /[username] -> message form to send anonymous message
+- /admin/message/[username] -> admin/confessions view
+
+API endpoints
+- POST /api/username -> create user and return JWT
+- POST /api/[username] -> submit a message for the user
+- POST /api/admin/message/[user] -> return messages for a user
+
+Notes
+- `backend/main.js` and the original Express router files are left in the repo for reference but are no longer used by the Next.js app.
 # 📨 Desi-NGL – Anonymous Confession Platform 🇮🇳
 
 **Desi-NGL** is a lightweight full-stack application that allows users to receive anonymous messages via a shareable link. Built using **Node.js**, **Express**, **MongoDB**, and vanilla **HTML/CSS**, this app mimics the popular NGL concept but with a Desi twist.

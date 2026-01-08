@@ -1,0 +1,3 @@
+{
+  "/api/[username]": "pages/api/[username].js"
+}

@@ -1,0 +1,3 @@
+{
+  "/api/admin/message/[user]": "pages/api/admin/message/[user].js"
+}

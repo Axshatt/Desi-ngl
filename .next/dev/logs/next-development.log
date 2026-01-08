@@ -1,0 +1,15 @@
+[00:00:03.550] Server  LOG     ✓ Ready in 2.2s
+[00:00:13.503] Browser ERROR   unhandledRejection: ReferenceError: setIsSubscribed is not defined
+[00:00:17.046] Server  LOG     Connected to DB
+[00:00:59.959] Server  LOG     ✓ Compiled in 749ms
+[00:01:03.631] Server  LOG     ✓ Compiled in 1680ms
+[00:06:11.615] Server  WARN    ⚠ Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:06:19.091] Server  LOG     ✓ Compiled in 46ms
+[00:06:20.426] Browser LOG     Triggering auto-message for: axshat.in
+[00:06:20.543] Browser LOG     Triggering auto-message for: axshat.in
+[00:11:45.040] Browser LOG     Triggering auto-message for: axshat.in
+[01:02:56.152] Browser LOG     Triggering auto-message for: axshat.in
+[01:03:17.779] Server  ERROR   Auto-message error: Error: read ECONNRESET
+[01:03:18.557] Browser ERROR   Auto-message failed: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"username\":\"axshat.in\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/admin/auto-message","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/5c51d_axios_lib_5fd63821._.js:1954:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/5c51d_axios_lib_5fd63821._.js:2469:182)\n    at Axios.request (http://localhost:3000/_next/static/chunks/5c51d_axios_lib_5fd63821._.js:3273:49)\n    at async AdminMessages.useEffect.checkAndTriggerAutoMessage (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__c0ed2082._.js?id=%255Bproject%255D%252FDesi-Ngl%252Fpages%252Fadmin%252Fmessage%252F%255Busername%255D.js+%255Bclient%255D+%2528ecmascript%2529:66:29)","status":500}
+[01:32:40.848] Browser LOG     Triggering auto-message for: axshat.in

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///D:/Akshat%20Singh/SideProjIdeas/Desi-Ngl/pages/_document.js"],"sourcesContent":["import { Html, Head, Main, NextScript } from 'next/document'\r\n\r\nexport default function Document() {\r\n    return (\r\n        <Html lang=\"en\">\r\n            <Head>\r\n                <link rel=\"manifest\" href=\"/manifest.json\" />\r\n                <link rel=\"apple-touch-icon\" href=\"/icon.png\" />\r\n                <meta name=\"theme-color\" content=\"#050505\" />\r\n            </Head>\r\n            <body>\r\n                <Main />\r\n                <NextScript />\r\n            </body>\r\n        </Html>\r\n    )\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACpB,qBACI,qKAAC,gJAAI;QAAC,MAAK;;0BACP,qKAAC,gJAAI;;kCACD,qKAAC;wBAAK,KAAI;wBAAW,MAAK;;;;;;kCAC1B,qKAAC;wBAAK,KAAI;wBAAmB,MAAK;;;;;;kCAClC,qKAAC;wBAAK,MAAK;wBAAc,SAAQ;;;;;;;;;;;;0BAErC,qKAAC;;kCACG,qKAAC,gJAAI;;;;;kCACL,qKAAC,sJAAU;;;;;;;;;;;;;;;;;AAI3B"}}]
+}
