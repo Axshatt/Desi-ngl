@@ -1,0 +1,3 @@
+{
+  "/admin/message/[username]": "pages/admin/message/[username].js"
+}

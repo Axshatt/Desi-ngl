@@ -1,0 +1,148 @@
+@import "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap";
+/* [project]/Desi-Ngl/styles/globals.css [client] (css) */
+:root {
+  --bg-color: #050505;
+  --surface-color: #121212;
+  --text-primary: #fff;
+  --text-secondary: #a0a0a0;
+  --accent-purple: #8a2be2;
+  --accent-lime: #cf0;
+  --glass-bg: #ffffff0d;
+  --glass-border: #ffffff1a;
+  --font-main: "Outfit", sans-serif;
+  --shadow-color: #00000080;
+  --grid-line: #ffffff08;
+}
+
+[data-theme="light"] {
+  --bg-color: #f0f2f5;
+  --surface-color: #fff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --accent-purple: #7020b8;
+  --accent-lime: #6a8a00;
+  --glass-bg: #fff9;
+  --glass-border: #0000000d;
+  --shadow-color: #0000001a;
+  --grid-line: #00000008;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--bg-color);
+  height: 100%;
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  transition: background-color .3s, color .3s;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: radial-gradient(circle at 15%, #8a2be226, #0000 25%), radial-gradient(circle at 85% 30%, #ccff001a, #0000 25%);
+}
+
+[data-theme="light"] body {
+  background-image: radial-gradient(circle at 15%, #8a2be20d, #0000 25%), radial-gradient(circle at 85% 30%, #ccff000d, #0000 25%);
+}
+
+#__next {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+a:hover {
+  opacity: .8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #fff 0%, #a0a0a0 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--accent-lime) 0%, var(--accent-purple) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px var(--accent-purple), 0 0 10px var(--accent-purple);
+  }
+
+  50% {
+    box-shadow: 0 0 20px var(--accent-purple), 0 0 30px var(--accent-purple);
+  }
+
+  100% {
+    box-shadow: 0 0 5px var(--accent-purple), 0 0 10px var(--accent-purple);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: 6s ease-in-out infinite float;
+}
+
+.animate-glow {
+  animation: 3s ease-in-out infinite glow;
+}
+
+.animate-fade-in {
+  animation: .8s ease-out forwards fadeInUp;
+}
+
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  -webkit-mask-image: radial-gradient(circle, #000 40%, #0000 100%);
+  mask-image: radial-gradient(circle, #000 40%, #0000 100%);
+}
+
+/*# sourceMappingURL=Desi-Ngl_styles_globals_7a262dfc.css.map*/
