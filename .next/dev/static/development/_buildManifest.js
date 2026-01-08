@@ -8,6 +8,9 @@ self.__BUILD_MANIFEST = {
   "/admin/message/[username]": [
     "static/chunks/pages/admin/message/[username].js"
   ],
+  "/link/[username]": [
+    "static/chunks/pages/link/[username].js"
+  ],
   "__rewrites": {
     "afterFiles": [],
     "beforeFiles": [],
