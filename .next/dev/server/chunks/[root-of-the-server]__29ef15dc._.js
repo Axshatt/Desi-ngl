@@ -29,11 +29,17 @@ const userSchema = new Schema({
 });
 const messageSchema = new Schema({
     message: String,
+    mood: {
+        type: String,
+        default: 'Serious'
+    },
     userId: ObjectId
 });
 // Prevent model overwrite error in dev mode
-const userModal = mongoose.models.users || mongoose.model("users", userSchema);
-const messageModal = mongoose.models.messages || mongoose.model("messages", messageSchema);
+if (mongoose.models.users) delete mongoose.models.users;
+if (mongoose.models.messages) delete mongoose.models.messages;
+const userModal = mongoose.model("users", userSchema);
+const messageModal = mongoose.model("messages", messageSchema);
 module.exports = {
     userModal,
     messageModal
@@ -52,7 +58,7 @@ async function handler(req, res) {
     const username = req.query.username;
     if (method === 'POST') {
         try {
-            const { message } = req.body;
+            const { message, mood = 'Serious' } = req.body;
             if (!message) return res.status(400).json({
                 error: 'message required'
             });
@@ -64,6 +70,7 @@ async function handler(req, res) {
             });
             await messageModal.create({
                 message,
+                mood,
                 userId: user._id
             });
             return res.status(200).json({

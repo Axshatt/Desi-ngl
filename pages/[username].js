@@ -2,20 +2,28 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { Send } from 'lucide-react'
+import { Send, Flame, Heart, Smile, AlertCircle } from 'lucide-react'
 
 export default function MessagePage() {
   const router = useRouter()
   const { username } = router.query
   const [msg, setMsg] = useState('')
+  const [mood, setMood] = useState('Serious')
   const [sending, setSending] = useState(false)
+
+  const moods = [
+    { id: 'Serious', icon: <AlertCircle size={16} />, color: '#666' },
+    { id: 'Fun', icon: <Smile size={16} />, color: '#FFD700' },
+    { id: 'Advice', icon: <Heart size={16} />, color: '#FF69B4' },
+    { id: 'Roast', icon: <Flame size={16} />, color: '#FF4500' },
+  ]
 
   async function sendMessage() {
     if (!msg.trim()) return toast.error('Please enter a message.')
     const u = username || ''
     setSending(true)
     try {
-      await axios.post(`/api/${encodeURIComponent(u)}`, { message: msg })
+      await axios.post(`/api/${encodeURIComponent(u)}`, { message: msg, mood })
       toast.success('Message Sent!')
       setMsg('')
     } catch (e) {
@@ -62,6 +70,31 @@ export default function MessagePage() {
             marginBottom: '20px'
           }}
         />
+
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {moods.map(m => (
+            <button
+              key={m.id}
+              onClick={() => setMood(m.id)}
+              style={{
+                background: mood === m.id ? 'var(--text-primary)' : 'rgba(255,255,255,0.05)',
+                color: mood === m.id ? 'var(--bg-color)' : 'var(--text-secondary)',
+                border: `1px solid ${mood === m.id ? 'var(--text-primary)' : 'var(--glass-border)'}`,
+                padding: '8px 16px',
+                borderRadius: '100px',
+                fontSize: '13px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                transition: 'all 0.2s'
+              }}
+            >
+              {m.icon} {m.id}
+            </button>
+          ))}
+        </div>
 
         <button
           onClick={sendMessage}

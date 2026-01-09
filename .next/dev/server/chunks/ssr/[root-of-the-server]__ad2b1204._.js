@@ -51,33 +51,15 @@ function Document() {
         lang: "en",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$document$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Head"], {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("link", {
-                        rel: "manifest",
-                        href: "/manifest.json"
-                    }, void 0, false, {
-                        fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 7,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("link", {
-                        rel: "apple-touch-icon",
-                        href: "/icon.png"
-                    }, void 0, false, {
-                        fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 8,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("meta", {
-                        name: "theme-color",
-                        content: "#050505"
-                    }, void 0, false, {
-                        fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 9,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("link", {
+                    rel: "icon",
+                    href: "/thunder.svg"
+                }, void 0, false, {
+                    fileName: "[project]/Desi-Ngl/pages/_document.js",
+                    lineNumber: 7,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/_document.js",
                 lineNumber: 6,
                 columnNumber: 13
@@ -86,18 +68,18 @@ function Document() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$document$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Main"], {}, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 12,
+                        lineNumber: 10,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$document$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["NextScript"], {}, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 13,
+                        lineNumber: 11,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/_document.js",
-                lineNumber: 11,
+                lineNumber: 9,
                 columnNumber: 13
             }, this)
         ]

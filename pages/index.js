@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { Zap, Send, Link as LinkIcon, MessageCircle, Shield, Ghost, Sparkles, ChevronDown } from 'lucide-react'
+import { Zap, Send, Link as LinkIcon, MessageCircle, Shield, Ghost, Sparkles, ChevronDown, Github, Linkedin } from 'lucide-react'
 
 export default function Home() {
   const [username, setUsername] = useState('')
@@ -47,10 +47,55 @@ export default function Home() {
       {/* Background Grid */}
       <div className="grid-bg" style={{ position: 'fixed', inset: 0, zIndex: -1 }}></div>
 
-      <nav className="container" style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <nav style={{ width: '100%', padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ fontWeight: 800, fontSize: '24px', letterSpacing: '-1px', display: 'flex', alignItems: 'center', gap: '5px' }}>
           <Zap size={24} className="text-gradient-primary" />
           Desi<span className="text-gradient-primary">NGL</span>
+        </div>
+
+        <div style={{ display: 'flex', gap: '15px' }}>
+          <a
+            href="https://github.com/Axshatt/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              background: 'var(--glass-bg)',
+              border: '1px solid var(--glass-border)',
+              color: 'var(--text-primary)',
+              transition: 'all 0.2s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = 'var(--text-primary)' }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--glass-border)' }}
+          >
+            <Github size={20} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/axshattt/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              background: 'var(--glass-bg)',
+              border: '1px solid var(--glass-border)',
+              color: 'var(--text-primary)',
+              transition: 'all 0.2s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.borderColor = 'var(--text-primary)' }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--glass-border)' }}
+          >
+            <Linkedin size={20} />
+          </a>
         </div>
       </nav>
 
@@ -220,6 +265,17 @@ export default function Home() {
       </section>
 
       <footer style={{ padding: '60px 0 30px', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '14px', borderTop: '1px solid var(--glass-border)' }}>
+        <div style={{ marginBottom: '30px' }}>
+          <a align="center" href="https://www.producthunt.com/products/desi-ngl?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-desi-ngl" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1060745&theme=dark"
+              alt="Desi-Ngl - Tell Truths. Reveal Vibes. & Open Source | Product Hunt"
+              style={{ width: '250px', height: '54px' }}
+              width="250"
+              height="54"
+            />
+          </a>
+        </div>
         <div style={{ fontWeight: 800, fontSize: '24px', letterSpacing: '-1px', marginBottom: '10px' }}>
           Desi<span className="text-gradient-primary">NGL</span>
         </div>

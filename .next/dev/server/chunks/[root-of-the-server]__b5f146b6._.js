@@ -29,11 +29,17 @@ const userSchema = new Schema({
 });
 const messageSchema = new Schema({
     message: String,
+    mood: {
+        type: String,
+        default: 'Serious'
+    },
     userId: ObjectId
 });
 // Prevent model overwrite error in dev mode
-const userModal = mongoose.models.users || mongoose.model("users", userSchema);
-const messageModal = mongoose.models.messages || mongoose.model("messages", messageSchema);
+if (mongoose.models.users) delete mongoose.models.users;
+if (mongoose.models.messages) delete mongoose.models.messages;
+const userModal = mongoose.model("users", userSchema);
+const messageModal = mongoose.model("messages", messageSchema);
 module.exports = {
     userModal,
     messageModal

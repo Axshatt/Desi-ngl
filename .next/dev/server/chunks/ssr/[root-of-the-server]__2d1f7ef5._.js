@@ -42,6 +42,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ghost$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Ghost$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/ghost.js [ssr] (ecmascript) <export default as Ghost>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/sparkles.js [ssr] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/chevron-down.js [ssr] (ecmascript) <export default as ChevronDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/github.js [ssr] (ecmascript) <export default as Github>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/linkedin.js [ssr] (ecmascript) <export default as Linkedin>");
 var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
     __TURBOPACK__imported__module__$5b$externals$5d2f$axios__$5b$external$5d$__$28$axios$2c$__esm_import$2c$__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$29$__,
     __TURBOPACK__imported__module__$5b$externals$5d2f$react$2d$hot$2d$toast__$5b$external$5d$__$28$react$2d$hot$2d$toast$2c$__esm_import$2c$__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$29$__
@@ -150,47 +152,133 @@ function Home() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("nav", {
-                className: "container",
                 style: {
-                    padding: '20px',
+                    width: '100%',
+                    padding: '20px 40px',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center'
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    style: {
-                        fontWeight: 800,
-                        fontSize: '24px',
-                        letterSpacing: '-1px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '5px'
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
-                            size: 24,
-                            className: "text-gradient-primary"
-                        }, void 0, false, {
-                            fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 52,
-                            columnNumber: 11
-                        }, this),
-                        "Desi",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                            className: "text-gradient-primary",
-                            children: "NGL"
-                        }, void 0, false, {
-                            fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 53,
-                            columnNumber: 15
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/Desi-Ngl/pages/index.js",
-                    lineNumber: 51,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        style: {
+                            fontWeight: 800,
+                            fontSize: '24px',
+                            letterSpacing: '-1px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '5px'
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
+                                size: 24,
+                                className: "text-gradient-primary"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 52,
+                                columnNumber: 11
+                            }, this),
+                            "Desi",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                className: "text-gradient-primary",
+                                children: "NGL"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 53,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        style: {
+                            display: 'flex',
+                            gap: '15px'
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                href: "https://github.com/Axshatt/",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                style: {
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    width: '40px',
+                                    height: '40px',
+                                    borderRadius: '50%',
+                                    background: 'var(--glass-bg)',
+                                    border: '1px solid var(--glass-border)',
+                                    color: 'var(--text-primary)',
+                                    transition: 'all 0.2s'
+                                },
+                                onMouseEnter: (e)=>{
+                                    e.currentTarget.style.transform = 'translateY(-2px)';
+                                    e.currentTarget.style.borderColor = 'var(--text-primary)';
+                                },
+                                onMouseLeave: (e)=>{
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                    e.currentTarget.style.borderColor = 'var(--glass-border)';
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__["Github"], {
+                                    size: 20
+                                }, void 0, false, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 76,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 57,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                href: "https://www.linkedin.com/in/axshattt/",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                style: {
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    width: '40px',
+                                    height: '40px',
+                                    borderRadius: '50%',
+                                    background: 'var(--glass-bg)',
+                                    border: '1px solid var(--glass-border)',
+                                    color: 'var(--text-primary)',
+                                    transition: 'all 0.2s'
+                                },
+                                onMouseEnter: (e)=>{
+                                    e.currentTarget.style.transform = 'translateY(-2px)';
+                                    e.currentTarget.style.borderColor = 'var(--text-primary)';
+                                },
+                                onMouseLeave: (e)=>{
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                    e.currentTarget.style.borderColor = 'var(--glass-border)';
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
+                                    size: 20
+                                }, void 0, false, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 97,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 78,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                        lineNumber: 56,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
                 lineNumber: 50,
                 columnNumber: 7
@@ -228,7 +316,7 @@ function Home() {
                                 children: "✨ The #1 Anonymous Messaging App"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 61,
+                                lineNumber: 106,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
@@ -242,7 +330,7 @@ function Home() {
                                     "Unleash the ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 74,
+                                        lineNumber: 119,
                                         columnNumber: 25
                                     }, this),
                                     " ",
@@ -251,13 +339,13 @@ function Home() {
                                         children: "Untold Stories"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 74,
+                                        lineNumber: 119,
                                         columnNumber: 32
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 73,
+                                lineNumber: 118,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -271,13 +359,13 @@ function Home() {
                                 children: "Get honest feedback, confessions, and burning questions from your friends and followers. Simple, secure, and aesthetic."
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 76,
+                                lineNumber: 121,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 60,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -311,7 +399,7 @@ function Home() {
                                 children: "🔥 It's Viral"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 94,
+                                lineNumber: 139,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h2", {
@@ -322,7 +410,7 @@ function Home() {
                                 children: "Claim your unique link"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 98,
+                                lineNumber: 143,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -348,7 +436,7 @@ function Home() {
                                                 children: "@"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                lineNumber: 101,
+                                                lineNumber: 146,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -371,13 +459,13 @@ function Home() {
                                                 onBlur: (e)=>e.target.style.borderColor = 'var(--glass-border)'
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                lineNumber: 102,
+                                                lineNumber: 147,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 100,
+                                        lineNumber: 145,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -411,32 +499,32 @@ function Home() {
                                                     fill: "currentColor"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                    lineNumber: 146,
+                                                    lineNumber: 191,
                                                     columnNumber: 56
                                                 }, this)
                                             ]
                                         }, void 0, true)
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 122,
+                                        lineNumber: 167,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 99,
+                                lineNumber: 144,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 81,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 58,
+                lineNumber: 103,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -464,14 +552,14 @@ function Home() {
                                     children: "DesiNGL"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 156,
+                                    lineNumber: 201,
                                     columnNumber: 108
                                 }, this),
                                 "?"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 156,
+                            lineNumber: 201,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -502,7 +590,7 @@ function Home() {
                                             children: f.icon
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 169,
+                                            lineNumber: 214,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
@@ -513,7 +601,7 @@ function Home() {
                                             children: f.title
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 172,
+                                            lineNumber: 217,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -524,29 +612,29 @@ function Home() {
                                             children: f.desc
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 173,
+                                            lineNumber: 218,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 159,
+                                    lineNumber: 204,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 157,
+                            lineNumber: 202,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                    lineNumber: 155,
+                    lineNumber: 200,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 154,
+                lineNumber: 199,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -570,7 +658,7 @@ function Home() {
                             children: "FAQs"
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 183,
+                            lineNumber: 228,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -612,13 +700,13 @@ function Home() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                    lineNumber: 209,
+                                                    lineNumber: 254,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 192,
+                                            lineNumber: 237,
                                             columnNumber: 17
                                         }, this),
                                         faqOpen === i && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -630,29 +718,29 @@ function Home() {
                                             children: f.a
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 212,
+                                            lineNumber: 257,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 186,
+                                    lineNumber: 231,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 184,
+                            lineNumber: 229,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                    lineNumber: 182,
+                    lineNumber: 227,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 181,
+                lineNumber: 226,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("footer", {
@@ -664,6 +752,39 @@ function Home() {
                     borderTop: '1px solid var(--glass-border)'
                 },
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        style: {
+                            marginBottom: '30px'
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                            align: "center",
+                            href: "https://www.producthunt.com/products/desi-ngl?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-desi-ngl",
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                                src: "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1060745&theme=dark",
+                                alt: "Desi-Ngl - Tell Truths. Reveal Vibes. & Open Source | Product Hunt",
+                                style: {
+                                    width: '250px',
+                                    height: '54px'
+                                },
+                                width: "250",
+                                height: "54"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 270,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                            lineNumber: 269,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                        lineNumber: 268,
+                        columnNumber: 9
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         style: {
                             fontWeight: 800,
@@ -678,13 +799,13 @@ function Home() {
                                 children: "NGL"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 224,
+                                lineNumber: 280,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 223,
+                        lineNumber: 279,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -697,20 +818,20 @@ function Home() {
                                 children: "Gen Z"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 226,
+                                lineNumber: 282,
                                 columnNumber: 22
                             }, this),
                             " • Secure • Anonymous"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 226,
+                        lineNumber: 282,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 222,
+                lineNumber: 267,
                 columnNumber: 7
             }, this)
         ]

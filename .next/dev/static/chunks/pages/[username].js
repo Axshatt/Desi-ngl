@@ -6,8 +6,8 @@ __turbopack_load_page_chunks__("/[username]", [
   "static/chunks/5c51d_next_router_dfa7cfbc.js",
   "static/chunks/5c51d_react-dom_a9e3959f._.js",
   "static/chunks/5c51d_axios_lib_5fd63821._.js",
-  "static/chunks/5c51d_bbd5ecdd._.js",
+  "static/chunks/5c51d_22749266._.js",
   "static/chunks/[root-of-the-server]__d0ce5f73._.js",
   "static/chunks/Desi-Ngl_pages_[username]_2da965e7._.js",
-  "static/chunks/turbopack-Desi-Ngl_pages_[username]_9f36340d._.js"
+  "static/chunks/turbopack-Desi-Ngl_pages_[username]_eb4010ee._.js"
 ])

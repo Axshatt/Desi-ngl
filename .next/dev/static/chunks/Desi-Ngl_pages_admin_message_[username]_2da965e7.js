@@ -8,7 +8,7 @@
   "static/chunks/5c51d_next_router_dfa7cfbc.js",
   "static/chunks/5c51d_react-dom_a9e3959f._.js",
   "static/chunks/5c51d_axios_lib_5fd63821._.js",
-  "static/chunks/5c51d_ec72a720._.js",
+  "static/chunks/5c51d_cf381486._.js",
   "static/chunks/[root-of-the-server]__c0ed2082._.js"
 ],
     source: "entry"

@@ -1,15 +1,12 @@
 self.__BUILD_MANIFEST = {
-  "/": [
-    "static/chunks/pages/index.js"
-  ],
   "/[username]": [
     "static/chunks/pages/[username].js"
   ],
+  "/_error": [
+    "static/chunks/pages/_error.js"
+  ],
   "/admin/message/[username]": [
     "static/chunks/pages/admin/message/[username].js"
-  ],
-  "/link/[username]": [
-    "static/chunks/pages/link/[username].js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -23,6 +20,7 @@ self.__BUILD_MANIFEST = {
     "/admin/message/[username]",
     "/api/admin/auto-message",
     "/api/admin/message/[user]",
+    "/api/cron/auto-engage",
     "/api/username",
     "/api/[username]",
     "/link/[username]",

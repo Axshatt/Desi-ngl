@@ -2,7 +2,8 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { Trash2, RefreshCcw, LogOut, Inbox, User } from 'lucide-react'
+import { Trash2, RefreshCcw, LogOut, Inbox, User, Share2, Download, Zap } from 'lucide-react'
+import { toPng } from 'html-to-image'
 
 export default function AdminMessages() {
   const router = useRouter()
@@ -11,6 +12,7 @@ export default function AdminMessages() {
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [deleteId, setDeleteId] = useState(null)
+  const [sharingMsg, setSharingMsg] = useState(null)
 
   async function fetchMsgs(isRefresh = false) {
     const u = username || localStorage.getItem('username')
@@ -91,6 +93,28 @@ export default function AdminMessages() {
     router.push('/')
   }
 
+  const downloadStory = async (msg) => {
+    setSharingMsg(msg)
+    // Wait for render
+    setTimeout(async () => {
+      const node = document.getElementById('story-card-capture')
+      if (node) {
+        try {
+          const dataUrl = await toPng(node, { quality: 0.95, pixelRatio: 2 })
+          const link = document.createElement('a')
+          link.download = `desi-ngl-story-${Date.now()}.png`
+          link.href = dataUrl
+          link.click()
+          toast.success('Story saved to gallery!')
+        } catch (err) {
+          console.error(err)
+          toast.error('Failed to generate image')
+        }
+        setSharingMsg(null) // Cleanup after capture
+      }
+    }, 100)
+  }
+
   return (
     <div className="container" style={{ padding: '40px 20px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 
@@ -169,6 +193,108 @@ export default function AdminMessages() {
         </div>
       )}
 
+      {/* Hidden container for Story Capture */}
+      {sharingMsg && (
+        <div id="story-card-capture" style={{
+          position: 'fixed',
+          top: 0,
+          left: '-1000vw', // Hide off-screen
+          width: '1080px',
+          height: '1920px',
+          background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontFamily: 'Outfit, sans-serif',
+          zIndex: -1
+        }}>
+          {/* Decorative Elements */}
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 70%)' }}></div>
+
+          <div style={{ marginBottom: '60px', display: 'flex', alignItems: 'center', gap: '15px', zIndex: 1 }}>
+            <div style={{ background: 'var(--accent-purple)', padding: '15px', borderRadius: '50%' }}>
+              <Zap size={48} color="white" fill="white" />
+            </div>
+            <h1 style={{ fontSize: '64px', fontWeight: 800, color: 'white', margin: 0, letterSpacing: '-2px' }}>
+              Desi<span className="text-gradient-primary">NGL</span>
+            </h1>
+          </div>
+
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(40px)',
+            border: '2px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: '60px',
+            padding: '80px 60px',
+            width: '800px',
+            minHeight: '600px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            boxShadow: '0 40px 100px rgba(0,0,0,0.5)',
+            zIndex: 1
+          }}>
+            <div style={{
+              background: 'rgba(255,255,255,0.1)',
+              padding: '12px 30px',
+              borderRadius: '100px',
+              marginBottom: '40px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '15px'
+            }}>
+              <User size={32} color="#fff" />
+              <span style={{ fontSize: '24px', fontWeight: 600, color: 'rgba(255,255,255,0.8)' }}>Anonymous</span>
+            </div>
+
+            {sharingMsg.mood && (
+              <div style={{
+                background: 'var(--accent-purple)',
+                color: 'white',
+                padding: '10px 30px',
+                borderRadius: '100px',
+                fontSize: '20px',
+                fontWeight: 700,
+                marginBottom: '60px',
+                textTransform: 'uppercase',
+                letterSpacing: '2px'
+              }}>
+                {sharingMsg.mood}
+              </div>
+            )}
+
+            <div style={{
+              fontSize: '48px',
+              fontWeight: 600,
+              color: 'white',
+              textAlign: 'center',
+              lineHeight: 1.4,
+              marginBottom: '40px'
+            }}>
+              "{sharingMsg.message}"
+            </div>
+          </div>
+
+          <div style={{ marginTop: '80px', textAlign: 'center', zIndex: 1 }}>
+            <p style={{ fontSize: '32px', color: 'rgba(255,255,255,0.6)', margin: 0 }}>
+              Send me a secret message! 🤫
+            </p>
+            <div style={{
+              marginTop: '20px',
+              background: 'rgba(255,255,255,0.1)',
+              padding: '20px 40px',
+              borderRadius: '20px',
+              fontSize: '28px',
+              fontWeight: 600,
+              color: 'var(--accent-purple)'
+            }}>
+              Link in Bio 🔗
+            </div>
+          </div>
+        </div>
+      )}
+
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', flexWrap: 'wrap', gap: '15px' }}>
         <h1 style={{ fontSize: '32px', margin: 0, fontWeight: 800 }}>
           Inbox <span style={{ fontSize: '18px', verticalAlign: 'middle', background: 'var(--accent-purple)', padding: '2px 8px', borderRadius: '10px', color: 'white' }}>{messages.length}</span>
@@ -238,60 +364,162 @@ export default function AdminMessages() {
             <div key={m._id} style={{
               background: 'var(--surface-color)',
               border: '1px solid var(--glass-border)',
-              padding: '24px',
-              borderRadius: '20px',
+              borderRadius: '24px',
               boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
               transition: 'transform 0.2s',
               cursor: 'default',
-              position: 'relative'
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden'
             }}
               onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
+              {/* Header */}
               <div style={{
+                padding: '20px',
+                borderBottom: '1px solid var(--glass-border)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                background: 'rgba(255,255,255,0.02)'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '50%',
+                    background: 'var(--accent-purple)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white'
+                  }}>
+                    <User size={16} />
+                  </div>
+                  <span style={{ fontWeight: 700, fontSize: '14px' }}>Anonymous</span>
+                </div>
+                <div style={{
+                  fontSize: '11px',
+                  padding: '4px 10px',
+                  borderRadius: '100px',
+                  background: 'rgba(255,255,255,0.1)',
+                  color: 'var(--text-secondary)',
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}>
+                  {m.mood || 'Secret'}
+                </div>
+              </div>
+
+              {/* Body */}
+              <div style={{
+                padding: '24px',
                 fontSize: '18px',
-                lineHeight: '1.5',
+                lineHeight: '1.6',
                 color: 'var(--text-primary)',
                 whiteSpace: 'pre-wrap',
                 fontWeight: 500,
-                marginBottom: '40px'
+                flex: 1
               }}>
                 {m.message}
               </div>
 
+              {/* Footer */}
               <div style={{
-                position: 'absolute',
-                bottom: '20px',
-                right: '20px',
+                padding: '16px 20px',
+                borderTop: '1px solid var(--glass-border)',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '10px'
+                justifyContent: 'space-between',
+                background: 'rgba(255,255,255,0.02)'
               }}>
-                <span style={{ fontSize: '12px', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <User size={12} /> Anonymous
-                </span>
-                <button
-                  onClick={() => requestDelete(m._id)}
-                  style={{
-                    background: 'rgba(255, 0, 0, 0.1)',
-                    color: '#ff4444',
-                    border: 'none',
-                    borderRadius: '50%',
-                    width: '32px',
-                    height: '32px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    fontSize: '14px',
-                    transition: 'background 0.2s'
-                  }}
-                  title="Delete message"
-                  onMouseEnter={e => e.currentTarget.style.background = 'rgba(255, 0, 0, 0.2)'}
-                  onMouseLeave={e => e.currentTarget.style.background = 'rgba(255, 0, 0, 0.1)'}
-                >
-                  <Trash2 size={16} />
-                </button>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  {['🔥', '❤️', '😂'].map((emoji, i) => (
+                    <button key={i} style={{
+                      background: 'transparent',
+                      border: 'none',
+                      fontSize: '18px',
+                      cursor: 'pointer',
+                      padding: '4px',
+                      borderRadius: '50%',
+                      transition: 'transform 0.1s'
+                    }}
+                      onMouseDown={e => e.currentTarget.style.transform = 'scale(0.8)'}
+                      onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
+                    >
+                      {emoji}
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(`Check out this anonymous message I got on Desi-Ngl! \n\n"${m.message}"\n\nSend me one too!`)
+                      toast.success('Copied for Story!')
+                    }}
+                    style={{
+                      background: 'var(--text-primary)',
+                      color: 'var(--bg-color)',
+                      border: 'none',
+                      padding: '8px 16px',
+                      borderRadius: '12px',
+                      fontSize: '13px',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                  >
+                    Reply <Share2 size={14} />
+                  </button>
+
+                  <button
+                    onClick={() => downloadStory(m)}
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: '#fff',
+                      border: 'none',
+                      borderRadius: '50%',
+                      width: '32px',
+                      height: '32px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      transition: 'background 0.2s'
+                    }}
+                    title="Share to Story"
+                    onMouseEnter={e => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'}
+                    onMouseLeave={e => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
+                  >
+                    <Download size={16} />
+                  </button>
+
+                  <button
+                    onClick={() => requestDelete(m._id)}
+                    style={{
+                      background: 'rgba(255, 0, 0, 0.1)',
+                      color: '#ff4444',
+                      border: 'none',
+                      borderRadius: '12px',
+                      width: '32px',
+                      height: '32px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer'
+                    }}
+                    title="Delete message"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
