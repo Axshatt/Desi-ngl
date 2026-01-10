@@ -1,9 +1,25 @@
 {
+  "/": "pages/index.js",
   "/[username]": "pages/[username].js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
+  "/about": "pages/about.js",
   "/admin/message/[username]": "pages/admin/message/[username].js",
+  "/api/[username]": "pages/api/[username].js",
   "/api/admin/auto-message": "pages/api/admin/auto-message.js",
-  "/api/admin/message/[user]": "pages/api/admin/message/[user].js"
+  "/api/admin/message/[user]": "pages/api/admin/message/[user].js",
+  "/api/admin/reply": "pages/api/admin/reply.js",
+  "/api/message/consent": "pages/api/message/consent.js",
+  "/api/message/status": "pages/api/message/status.js",
+  "/api/stripe/checkout": "pages/api/stripe/checkout.js",
+  "/api/stripe/create-checkout-session": "pages/api/stripe/create-checkout-session.js",
+  "/api/stripe/mock-success": "pages/api/stripe/mock-success.js",
+  "/api/username": "pages/api/username.js",
+  "/contact": "pages/contact.js",
+  "/link/[username]": "pages/link/[username].js",
+  "/premium": "pages/premium.js",
+  "/privacy": "pages/privacy.js",
+  "/status/[id]": "pages/status/[id].js",
+  "/terms": "pages/terms.js"
 }

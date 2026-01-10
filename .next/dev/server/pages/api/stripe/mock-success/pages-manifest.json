@@ -1,0 +1,3 @@
+{
+  "/api/stripe/mock-success": "pages/api/stripe/mock-success.js"
+}

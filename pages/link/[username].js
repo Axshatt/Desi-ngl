@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { Link as LinkIcon, Check, Copy, MessageSquare, LogOut } from 'lucide-react'
 
+
 export default function Share() {
   const router = useRouter()
   const { username } = router.query

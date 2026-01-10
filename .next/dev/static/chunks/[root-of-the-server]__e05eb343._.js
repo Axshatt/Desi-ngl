@@ -472,17 +472,22 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/next/router.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/next/link.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/axios/lib/axios.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/react-hot-toast/dist/index.mjs [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/zap.js [client] (ecmascript) <export default as Zap>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/send.js [client] (ecmascript) <export default as Send>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/message-circle.js [client] (ecmascript) <export default as MessageCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/shield.js [client] (ecmascript) <export default as Shield>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$ghost$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Ghost$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/ghost.js [client] (ecmascript) <export default as Ghost>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/sparkles.js [client] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/chevron-down.js [client] (ecmascript) <export default as ChevronDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/github.js [client] (ecmascript) <export default as Github>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/linkedin.js [client] (ecmascript) <export default as Linkedin>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/instagram.js [client] (ecmascript) <export default as Instagram>");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 ;
@@ -521,11 +526,11 @@ function Home() {
                 className: "text-gradient-primary"
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 13
             }, this),
             title: '100% Anonymous',
-            desc: 'No trackers, no leaks. Your identity is completely hidden.'
+            desc: 'No trackers, no leaks. Your identity is locked behind bank-grade encryption.'
         },
         {
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__["Shield"], {
@@ -533,11 +538,11 @@ function Home() {
                 className: "text-gradient-primary"
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 13
             }, this),
-            title: 'Safe Space',
-            desc: 'Built-in filters to prevent bullying and harassment.'
+            title: 'Identity Reveal',
+            desc: 'Curious who sent it? Senders can choose to reveal themselves to you!'
         },
         {
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
@@ -545,34 +550,105 @@ function Home() {
                 className: "text-gradient-primary"
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 35,
+                lineNumber: 36,
                 columnNumber: 13
             }, this),
-            title: 'Gen Z Aesthetics',
-            desc: 'Clean, dark mode design that looks great on your Story.'
+            title: 'Gen Z Vibes',
+            desc: 'Ultra-aesthetic cards with mood tags and neon gradients for your Story.'
+        },
+        {
+            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
+                size: 32,
+                className: "text-gradient-primary"
+            }, void 0, false, {
+                fileName: "[project]/Desi-Ngl/pages/index.js",
+                lineNumber: 37,
+                columnNumber: 13
+            }, this),
+            title: 'Premium Hints',
+            desc: 'Get location (State/City), device info, and time-of-day vibes with Pro.'
+        },
+        {
+            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__["MessageCircle"], {
+                size: 32,
+                className: "text-gradient-primary"
+            }, void 0, false, {
+                fileName: "[project]/Desi-Ngl/pages/index.js",
+                lineNumber: 38,
+                columnNumber: 13
+            }, this),
+            title: 'Two-Way Chat',
+            desc: 'Reply to messages directly. Start a conversation without breaking anonymity.'
+        },
+        {
+            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
+                size: 32,
+                className: "text-gradient-primary"
+            }, void 0, false, {
+                fileName: "[project]/Desi-Ngl/pages/index.js",
+                lineNumber: 39,
+                columnNumber: 13
+            }, this),
+            title: 'Viral ready',
+            desc: 'High-res story generation. Just snap it and post it on your Insta story.'
         }
     ];
     const faqs = [
         {
             q: 'Is it really anonymous?',
-            a: 'Yes! We do not store IP addresses or any identifiable data of the sender.'
+            a: 'Yes! We only store what is necessary. Your IP and identity are never shared unless you explicitly choose to "Reveal Identity".'
+        },
+        {
+            q: 'What are Premium Hints?',
+            a: 'Pro members see hints like the sender\'s State/City, device (iPhone/Android), and even their vibe based on time-of-day.'
+        },
+        {
+            q: 'How do I reveal my identity?',
+            a: 'After a receiver replies to your secret, you\'ll see a prompt on your status page to stay anonymous or reveal yourself.'
         },
         {
             q: 'How do I share on Instagram?',
-            a: 'Copy your unique link and use the "Link" sticker in your Instagram Story.'
-        },
-        {
-            q: 'Can I reply to messages?',
-            a: 'Currently, you can screenshot the message and reply on your Story, typical NGL style.'
+            a: 'Copy your link, use the "Link" sticker on Instagram, and wait for the secrets to roll in!'
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
             minHeight: '100vh',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            overflow: 'hidden',
+            position: 'relative'
         },
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "aurora-bg",
+                style: {
+                    top: '10%',
+                    left: '10%',
+                    width: '400px',
+                    height: '400px',
+                    background: 'rgba(138, 43, 226, 0.2)'
+                }
+            }, void 0, false, {
+                fileName: "[project]/Desi-Ngl/pages/index.js",
+                lineNumber: 53,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "aurora-bg",
+                style: {
+                    top: '50%',
+                    right: '10%',
+                    width: '500px',
+                    height: '500px',
+                    background: 'rgba(204, 255, 0, 0.15)',
+                    animationDelay: '-5s'
+                }
+            }, void 0, false, {
+                fileName: "[project]/Desi-Ngl/pages/index.js",
+                lineNumber: 54,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid-bg",
                 style: {
@@ -582,7 +658,7 @@ function Home() {
                 }
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 48,
+                lineNumber: 57,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -591,7 +667,8 @@ function Home() {
                     padding: '20px 40px',
                     display: 'flex',
                     justifyContent: 'space-between',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    zIndex: 10
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -609,7 +686,7 @@ function Home() {
                                 className: "text-gradient-primary"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 52,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             "Desi",
@@ -618,13 +695,60 @@ function Home() {
                                 children: "NGL"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 53,
+                                lineNumber: 62,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 51,
+                        lineNumber: 60,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            display: 'flex',
+                            gap: '30px',
+                            alignItems: 'center',
+                            marginLeft: 'auto',
+                            marginRight: '30px'
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/how-it-works",
+                                style: {
+                                    color: 'var(--text-secondary)',
+                                    fontSize: '14px',
+                                    fontWeight: 600,
+                                    transition: 'color 0.2s'
+                                },
+                                onMouseEnter: (e)=>e.target.style.color = '#fff',
+                                onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                children: "How it works"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 66,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/faq",
+                                style: {
+                                    color: 'var(--text-secondary)',
+                                    fontSize: '14px',
+                                    fontWeight: 600,
+                                    transition: 'color 0.2s'
+                                },
+                                onMouseEnter: (e)=>e.target.style.color = '#fff',
+                                onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                children: "FAQ"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/index.js",
+                                lineNumber: 67,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -661,12 +785,12 @@ function Home() {
                                     size: 20
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 76,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 57,
+                                lineNumber: 71,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -697,24 +821,24 @@ function Home() {
                                     size: 20
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 97,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 78,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 56,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 50,
+                lineNumber: 59,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -727,7 +851,8 @@ function Home() {
                     justifyContent: 'center',
                     textAlign: 'center',
                     gap: '40px',
-                    padding: '60px 20px'
+                    padding: '60px 20px',
+                    zIndex: 1
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -750,7 +875,7 @@ function Home() {
                                 children: "✨ The #1 Anonymous Messaging App"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 106,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -764,22 +889,22 @@ function Home() {
                                     "Unleash the ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 119,
+                                        lineNumber: 133,
                                         columnNumber: 25
                                     }, this),
                                     " ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-gradient-primary",
+                                        className: "shimmer-text",
                                         children: "Untold Stories"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 119,
+                                        lineNumber: 133,
                                         columnNumber: 32
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 118,
+                                lineNumber: 132,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -793,13 +918,13 @@ function Home() {
                                 children: "Get honest feedback, confessions, and burning questions from your friends and followers. Simple, secure, and aesthetic."
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 121,
+                                lineNumber: 135,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 105,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -828,12 +953,13 @@ function Home() {
                                     borderRadius: '12px',
                                     transform: 'rotate(10deg)',
                                     boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
-                                    fontWeight: 'bold'
+                                    fontWeight: 'bold',
+                                    zIndex: 10
                                 },
                                 children: "🔥 It's Viral"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 139,
+                                lineNumber: 153,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -844,7 +970,7 @@ function Home() {
                                 children: "Claim your unique link"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 143,
+                                lineNumber: 157,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -870,7 +996,7 @@ function Home() {
                                                 children: "@"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                lineNumber: 146,
+                                                lineNumber: 160,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -893,13 +1019,13 @@ function Home() {
                                                 onBlur: (e)=>e.target.style.borderColor = 'var(--glass-border)'
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                lineNumber: 147,
+                                                lineNumber: 161,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 145,
+                                        lineNumber: 159,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -933,43 +1059,47 @@ function Home() {
                                                     fill: "currentColor"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                    lineNumber: 191,
+                                                    lineNumber: 205,
                                                     columnNumber: 56
                                                 }, this)
                                             ]
                                         }, void 0, true)
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                                        lineNumber: 167,
+                                        lineNumber: 181,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 144,
+                                lineNumber: 158,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 126,
+                        lineNumber: 140,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 103,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 style: {
                     padding: '80px 20px',
-                    background: 'var(--surface-color)'
+                    background: 'var(--surface-color)',
+                    position: 'relative',
+                    overflow: 'hidden'
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "container",
                     style: {
-                        maxWidth: '1000px'
+                        maxWidth: '1000px',
+                        position: 'relative',
+                        zIndex: 1
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -986,14 +1116,14 @@ function Home() {
                                     children: "DesiNGL"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 201,
+                                    lineNumber: 215,
                                     columnNumber: 108
                                 }, this),
                                 "?"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 201,
+                            lineNumber: 215,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1003,15 +1133,26 @@ function Home() {
                                 gap: '40px'
                             },
                             children: features.map((f, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "animate-fade-in",
                                     style: {
                                         padding: '30px',
                                         borderRadius: '24px',
                                         background: 'var(--bg-color)',
                                         border: '1px solid var(--glass-border)',
-                                        transition: 'transform 0.3s'
+                                        transition: 'all 0.3s',
+                                        animationDelay: `${0.1 * (i + 1)}s`,
+                                        cursor: 'default'
                                     },
-                                    onMouseEnter: (e)=>e.currentTarget.style.transform = 'translateY(-5px)',
-                                    onMouseLeave: (e)=>e.currentTarget.style.transform = 'translateY(0)',
+                                    onMouseEnter: (e)=>{
+                                        e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
+                                        e.currentTarget.style.borderColor = 'var(--accent-purple)';
+                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(138, 43, 226, 0.15)';
+                                    },
+                                    onMouseLeave: (e)=>{
+                                        e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                                        e.currentTarget.style.borderColor = 'var(--glass-border)';
+                                        e.currentTarget.style.boxShadow = 'none';
+                                    },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             style: {
@@ -1024,7 +1165,7 @@ function Home() {
                                             children: f.icon
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 214,
+                                            lineNumber: 238,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1035,7 +1176,7 @@ function Home() {
                                             children: f.title
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 217,
+                                            lineNumber: 241,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1046,29 +1187,29 @@ function Home() {
                                             children: f.desc
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 218,
+                                            lineNumber: 242,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 204,
+                                    lineNumber: 218,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 202,
+                            lineNumber: 216,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                    lineNumber: 200,
+                    lineNumber: 214,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 199,
+                lineNumber: 213,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1092,7 +1233,7 @@ function Home() {
                             children: "FAQs"
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 228,
+                            lineNumber: 252,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1134,13 +1275,13 @@ function Home() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                                    lineNumber: 254,
+                                                    lineNumber: 278,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 237,
+                                            lineNumber: 261,
                                             columnNumber: 17
                                         }, this),
                                         faqOpen === i && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1152,126 +1293,546 @@ function Home() {
                                             children: f.a
                                         }, void 0, false, {
                                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                                            lineNumber: 257,
+                                            lineNumber: 281,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                                    lineNumber: 231,
+                                    lineNumber: 255,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 229,
+                            lineNumber: 253,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/index.js",
-                    lineNumber: 227,
+                    lineNumber: 251,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 226,
+                lineNumber: 250,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
                 style: {
-                    padding: '60px 0 30px',
-                    textAlign: 'center',
-                    color: 'var(--text-secondary)',
-                    fontSize: '14px',
-                    borderTop: '1px solid var(--glass-border)'
+                    background: 'var(--surface-color)',
+                    borderTop: '1px solid var(--glass-border)',
+                    padding: '80px 20px 40px',
+                    position: 'relative'
                 },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            marginBottom: '30px'
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            align: "center",
-                            href: "https://www.producthunt.com/products/desi-ngl?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-desi-ngl",
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1060745&theme=dark",
-                                alt: "Desi-Ngl - Tell Truths. Reveal Vibes. & Open Source | Product Hunt",
-                                style: {
-                                    width: '250px',
-                                    height: '54px'
-                                },
-                                width: "250",
-                                height: "54"
-                            }, void 0, false, {
-                                fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 270,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "container",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                                gap: '60px',
+                                marginBottom: '60px'
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: '20px'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                fontWeight: 800,
+                                                fontSize: '24px',
+                                                letterSpacing: '-1px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '5px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
+                                                    size: 24,
+                                                    className: "text-gradient-primary"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 298,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Desi",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-gradient-primary",
+                                                    children: "NGL"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 299,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 297,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            style: {
+                                                color: 'var(--text-secondary)',
+                                                fontSize: '14px',
+                                                lineHeight: 1.6,
+                                                maxWidth: '280px'
+                                            },
+                                            children: "The world's most viral anonymous messaging platform. Tell truths, get roasts, and spill secrets safely."
+                                        }, void 0, false, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 301,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                display: 'flex',
+                                                gap: '15px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://github.com/Axshatt/",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    style: {
+                                                        color: 'var(--text-secondary)',
+                                                        transition: 'color 0.2s'
+                                                    },
+                                                    onMouseEnter: (e)=>e.currentTarget.style.color = '#fff',
+                                                    onMouseLeave: (e)=>e.currentTarget.style.color = 'var(--text-secondary)',
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__["Github"], {
+                                                        size: 20
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 306,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 305,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://linkedin.com/in/axshattt/",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    style: {
+                                                        color: 'var(--text-secondary)',
+                                                        transition: 'color 0.2s'
+                                                    },
+                                                    onMouseEnter: (e)=>e.currentTarget.style.color = '#fff',
+                                                    onMouseLeave: (e)=>e.currentTarget.style.color = 'var(--text-secondary)',
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
+                                                        size: 20
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 309,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 308,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://instagram.com/desi_ngl_official",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    style: {
+                                                        color: 'var(--text-secondary)',
+                                                        transition: 'color 0.2s'
+                                                    },
+                                                    onMouseEnter: (e)=>e.currentTarget.style.color = '#fff',
+                                                    onMouseLeave: (e)=>e.currentTarget.style.color = 'var(--text-secondary)',
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__["Instagram"], {
+                                                        size: 20
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 312,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 311,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 304,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 296,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                            style: {
+                                                fontSize: '16px',
+                                                fontWeight: 800,
+                                                marginBottom: '20px',
+                                                color: '#fff'
+                                            },
+                                            children: "Product"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 319,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            style: {
+                                                listStyle: 'none',
+                                                padding: 0,
+                                                margin: 0,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '12px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/how-it-works",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "How it works"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 321,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 321,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/faq",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "FAQ"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 322,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 322,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/premium",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "Go Pro ✨"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 323,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 323,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 320,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 318,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                            style: {
+                                                fontSize: '16px',
+                                                fontWeight: 800,
+                                                marginBottom: '20px',
+                                                color: '#fff'
+                                            },
+                                            children: "Company"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 328,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            style: {
+                                                listStyle: 'none',
+                                                padding: 0,
+                                                margin: 0,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '12px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/contact",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "Contact Us"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 330,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 330,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/about",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "About Us"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 331,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 331,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "mailto:hello@desi-ngl.com",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "Support"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 332,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 332,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 329,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 327,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                            style: {
+                                                fontSize: '16px',
+                                                fontWeight: 800,
+                                                marginBottom: '20px',
+                                                color: '#fff'
+                                            },
+                                            children: "Legal"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 337,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            style: {
+                                                listStyle: 'none',
+                                                padding: 0,
+                                                margin: 0,
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                gap: '12px'
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/terms",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "Terms of Service"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 339,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 339,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        href: "/privacy",
+                                                        style: {
+                                                            color: 'var(--text-secondary)',
+                                                            fontSize: '14px',
+                                                            transition: 'color 0.2s'
+                                                        },
+                                                        onMouseEnter: (e)=>e.target.style.color = 'var(--accent-purple)',
+                                                        onMouseLeave: (e)=>e.target.style.color = 'var(--text-secondary)',
+                                                        children: "Privacy Policy"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                        lineNumber: 340,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                                    lineNumber: 340,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 338,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 336,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/Desi-Ngl/pages/index.js",
-                            lineNumber: 269,
+                            lineNumber: 293,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                paddingTop: '40px',
+                                borderTop: '1px solid var(--glass-border)',
+                                flexWrap: 'wrap',
+                                gap: '20px'
+                            },
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    style: {
+                                        color: 'var(--text-secondary)',
+                                        fontSize: '12px'
+                                    },
+                                    children: "© 2026 Desi-Ngl. Built for Gen Z."
+                                }, void 0, false, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 347,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '20px'
+                                    },
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "https://www.producthunt.com/products/desi-ngl?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-desi-ngl",
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            src: "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1060745&theme=dark",
+                                            alt: "Desi-Ngl | Product Hunt",
+                                            style: {
+                                                width: '150px',
+                                                height: '32px'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                                            lineNumber: 352,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desi-Ngl/pages/index.js",
+                                        lineNumber: 351,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                                    lineNumber: 350,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Desi-Ngl/pages/index.js",
+                            lineNumber: 346,
                             columnNumber: 11
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 268,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            fontWeight: 800,
-                            fontSize: '24px',
-                            letterSpacing: '-1px',
-                            marginBottom: '10px'
-                        },
-                        children: [
-                            "Desi",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-gradient-primary",
-                                children: "NGL"
-                            }, void 0, false, {
-                                fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 280,
-                                columnNumber: 15
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 279,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        children: [
-                            "Built for ",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                style: {
-                                    color: 'var(--text-primary)'
-                                },
-                                children: "Gen Z"
-                            }, void 0, false, {
-                                fileName: "[project]/Desi-Ngl/pages/index.js",
-                                lineNumber: 282,
-                                columnNumber: 22
-                            }, this),
-                            " • Secure • Anonymous"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/Desi-Ngl/pages/index.js",
-                        lineNumber: 282,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/Desi-Ngl/pages/index.js",
+                    lineNumber: 292,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/index.js",
-                lineNumber: 267,
+                lineNumber: 291,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desi-Ngl/pages/index.js",
-        lineNumber: 45,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }

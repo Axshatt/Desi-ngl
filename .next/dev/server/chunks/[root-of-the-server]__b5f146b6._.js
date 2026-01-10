@@ -25,7 +25,23 @@ if (mongoose.connection.readyState === 0) {
     }
 }
 const userSchema = new Schema({
-    username: String
+    username: String,
+    stripeCustomerId: {
+        type: String,
+        default: null
+    },
+    subscriptionStatus: {
+        type: String,
+        default: 'free'
+    },
+    subscriptionId: {
+        type: String,
+        default: null
+    },
+    subscriptionEndDate: {
+        type: Date,
+        default: null
+    }
 });
 const messageSchema = new Schema({
     message: String,

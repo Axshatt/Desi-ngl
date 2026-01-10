@@ -500,7 +500,7 @@ function MessagePage() {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 28
             }, this),
             color: '#666'
@@ -511,7 +511,7 @@ function MessagePage() {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                lineNumber: 16,
+                lineNumber: 18,
                 columnNumber: 24
             }, this),
             color: '#FFD700'
@@ -522,7 +522,7 @@ function MessagePage() {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                lineNumber: 17,
+                lineNumber: 19,
                 columnNumber: 27
             }, this),
             color: '#FF69B4'
@@ -533,7 +533,7 @@ function MessagePage() {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                lineNumber: 18,
+                lineNumber: 20,
                 columnNumber: 26
             }, this),
             color: '#FF4500'
@@ -594,7 +594,7 @@ function MessagePage() {
                                 children: "Send a text to"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                                lineNumber: 50,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -609,13 +609,13 @@ function MessagePage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                                lineNumber: 51,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/[username].js",
-                        lineNumber: 49,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -638,7 +638,7 @@ function MessagePage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/[username].js",
-                        lineNumber: 54,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -672,12 +672,12 @@ function MessagePage() {
                                 ]
                             }, m.id, true, {
                                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                                lineNumber: 76,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/[username].js",
-                        lineNumber: 74,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -709,20 +709,20 @@ function MessagePage() {
                                     size: 18
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/[username].js",
-                                    lineNumber: 122,
+                                    lineNumber: 124,
                                     columnNumber: 52
                                 }, this)
                             ]
                         }, void 0, true)
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/[username].js",
-                        lineNumber: 99,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                lineNumber: 39,
+                lineNumber: 41,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -739,18 +739,18 @@ function MessagePage() {
                     children: "Get your own messages"
                 }, void 0, false, {
                     fileName: "[project]/Desi-Ngl/pages/[username].js",
-                    lineNumber: 127,
+                    lineNumber: 129,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/[username].js",
-                lineNumber: 126,
+                lineNumber: 128,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desi-Ngl/pages/[username].js",
-        lineNumber: 37,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }

@@ -5,6 +5,7 @@ import toast from 'react-hot-toast'
 import { Trash2, RefreshCcw, LogOut, Inbox, User, Share2, Download, Zap } from 'lucide-react'
 import { toPng } from 'html-to-image'
 
+
 export default function AdminMessages() {
   const router = useRouter()
   const { username } = router.query
@@ -295,7 +296,7 @@ export default function AdminMessages() {
         </div>
       )}
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', flexWrap: 'wrap', gap: '15px' }}>
+      <div className="nav-container mobile-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', flexWrap: 'wrap', gap: '15px' }}>
         <h1 style={{ fontSize: '32px', margin: 0, fontWeight: 800 }}>
           Inbox <span style={{ fontSize: '18px', verticalAlign: 'middle', background: 'var(--accent-purple)', padding: '2px 8px', borderRadius: '10px', color: 'white' }}>{messages.length}</span>
         </h1>

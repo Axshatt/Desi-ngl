@@ -4,6 +4,8 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import { Send, Flame, Heart, Smile, AlertCircle } from 'lucide-react'
 
+
+
 export default function MessagePage() {
   const router = useRouter()
   const { username } = router.query
