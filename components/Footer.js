@@ -35,7 +35,6 @@ export default function Footer() {
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             <li><Link href="/how-it-works" style={{ color: 'var(--text-secondary)', fontSize: '14px', textDecoration: 'none' }}>How it works</Link></li>
                             <li><Link href="/faq" style={{ color: 'var(--text-secondary)', fontSize: '14px', textDecoration: 'none' }}>FAQ</Link></li>
-                            <li><Link href="/premium" style={{ color: 'var(--text-secondary)', fontSize: '14px', textDecoration: 'none' }}>Go Pro ✨</Link></li>
                         </ul>
                     </div>
 

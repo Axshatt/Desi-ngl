@@ -469,7 +469,6 @@ __turbopack_context__.s([
     "default",
     ()=>Premium
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/Desi-Ngl/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/next/head.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/next/link.js [client] (ecmascript)");
@@ -478,8 +477,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/shield.js [client] (ecmascript) <export default as Shield>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/eye.js [client] (ecmascript) <export default as Eye>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$flame$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Flame$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/flame.js [client] (ecmascript) <export default as Flame>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f40$stripe$2f$stripe$2d$js$2f$lib$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/@stripe/stripe-js/lib/index.mjs [client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f40$stripe$2f$stripe$2d$js$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/@stripe/stripe-js/dist/index.mjs [client] (ecmascript)");
+// Razorpay checkout will be loaded dynamically
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/axios/lib/axios.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/react-hot-toast/dist/index.mjs [client] (ecmascript)");
@@ -491,11 +489,21 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
-const stripePromise = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f40$stripe$2f$stripe$2d$js$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["loadStripe"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 function Premium() {
     _s();
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const loadRazorpayScript = ()=>{
+        return new Promise((resolve, reject)=>{
+            if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+            ;
+            if (window.Razorpay) return resolve();
+            const script = document.createElement('script');
+            script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+            script.onload = ()=>resolve();
+            script.onerror = ()=>reject('Razorpay SDK failed to load');
+            document.body.appendChild(script);
+        });
+    };
     const handleUpgrade = async ()=>{
         const username = localStorage.getItem('username');
         if (!username) {
@@ -505,15 +513,33 @@ function Premium() {
         }
         setLoading(true);
         try {
-            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].post('/api/stripe/create-checkout-session', {
+            // Create order on backend
+            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].post('/api/razorpay/create-order', {
                 username
             });
-            const stripe = await stripePromise;
-            await stripe.redirectToCheckout({
-                sessionId: res.data.sessionId
-            });
+            const { orderId, keyId } = res.data;
+            await loadRazorpayScript();
+            const options = {
+                key: keyId,
+                order_id: orderId,
+                name: 'Desi-Ngl Pro',
+                description: 'Pro subscription',
+                handler: function(response) {
+                    // You can verify payment on server via webhook
+                    __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success('Payment successful!');
+                // Optionally refresh subscription status
+                },
+                prefill: {
+                },
+                theme: {
+                    color: '#5A67D8'
+                }
+            };
+            const rzp = new window.Razorpay(options);
+            rzp.open();
         } catch (error) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error('Payment failed: ' + error.message);
+            __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error('Payment failed: ' + (error.message || 'Unknown error'));
+        } finally{
             setLoading(false);
         }
     };
@@ -560,12 +586,12 @@ function Premium() {
                     children: "Go Pro | Desi-Ngl"
                 }, void 0, false, {
                     fileName: "[project]/Desi-Ngl/pages/premium.js",
-                    lineNumber: 65,
+                    lineNumber: 97,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                lineNumber: 64,
+                lineNumber: 96,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -580,7 +606,7 @@ function Premium() {
                 }
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                lineNumber: 68,
+                lineNumber: 100,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -592,7 +618,7 @@ function Premium() {
                 }
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                lineNumber: 69,
+                lineNumber: 101,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -615,19 +641,19 @@ function Premium() {
                             size: 20
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/premium.js",
-                            lineNumber: 73,
+                            lineNumber: 105,
                             columnNumber: 21
                         }, this),
                         " Back to Home"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/premium.js",
-                    lineNumber: 72,
+                    lineNumber: 104,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                lineNumber: 71,
+                lineNumber: 103,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -665,12 +691,12 @@ function Premium() {
                                     children: "Premium Experience"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                    lineNumber: 80,
+                                    lineNumber: 112,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 79,
+                                lineNumber: 111,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -686,14 +712,14 @@ function Premium() {
                                         children: "Gossip"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 83,
+                                        lineNumber: 115,
                                         columnNumber: 38
                                     }, this),
                                     " Game"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 82,
+                                lineNumber: 114,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -706,13 +732,13 @@ function Premium() {
                                 children: "Unlock the power to see who's behind the secrets with our Pro features."
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 85,
+                                lineNumber: 117,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                        lineNumber: 78,
+                        lineNumber: 110,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -751,7 +777,7 @@ function Premium() {
                                         children: "MOST POPULAR"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 103,
+                                        lineNumber: 135,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -762,7 +788,7 @@ function Premium() {
                                         children: p.name
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 107,
+                                        lineNumber: 139,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -781,7 +807,7 @@ function Premium() {
                                                 children: p.price
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                                lineNumber: 109,
+                                                lineNumber: 141,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -791,13 +817,13 @@ function Premium() {
                                                 children: "/month"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                                lineNumber: 110,
+                                                lineNumber: 142,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 108,
+                                        lineNumber: 140,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -829,24 +855,24 @@ function Premium() {
                                                             color: p.popular ? 'var(--accent-purple)' : '#fff'
                                                         }, void 0, false, {
                                                             fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                                            lineNumber: 116,
+                                                            lineNumber: 148,
                                                             columnNumber: 45
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                                        lineNumber: 115,
+                                                        lineNumber: 147,
                                                         columnNumber: 41
                                                     }, this),
                                                     f
                                                 ]
                                             }, j, true, {
                                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                                lineNumber: 114,
+                                                lineNumber: 146,
                                                 columnNumber: 37
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 112,
+                                        lineNumber: 144,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -870,18 +896,18 @@ function Premium() {
                                         children: loading && p.name === 'Pro' ? 'Processing...' : p.button
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 122,
+                                        lineNumber: 154,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, i, true, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 92,
+                                lineNumber: 124,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                        lineNumber: 90,
+                        lineNumber: 122,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -906,14 +932,14 @@ function Premium() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 149,
+                                        lineNumber: 181,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                         children: "Secure Payments"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 150,
+                                        lineNumber: 182,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -924,13 +950,13 @@ function Premium() {
                                         children: "Bank-grade encryption for all transactions."
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 151,
+                                        lineNumber: 183,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 148,
+                                lineNumber: 180,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -947,14 +973,14 @@ function Premium() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 154,
+                                        lineNumber: 186,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                         children: "No Log Policy"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 155,
+                                        lineNumber: 187,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -965,13 +991,13 @@ function Premium() {
                                         children: "We don't track who you are, even on Pro."
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 156,
+                                        lineNumber: 188,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 153,
+                                lineNumber: 185,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -988,14 +1014,14 @@ function Premium() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 159,
+                                        lineNumber: 191,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                         children: "Instant Activation"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 160,
+                                        lineNumber: 192,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -1005,31 +1031,31 @@ function Premium() {
                                         children: "Vibe check your inbox immediately."
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                        lineNumber: 161,
+                                        lineNumber: 193,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                                lineNumber: 158,
+                                lineNumber: 190,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/premium.js",
-                        lineNumber: 147,
+                        lineNumber: 179,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/premium.js",
-                lineNumber: 77,
+                lineNumber: 109,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desi-Ngl/pages/premium.js",
-        lineNumber: 63,
+        lineNumber: 95,
         columnNumber: 9
     }, this);
 }

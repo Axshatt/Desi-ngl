@@ -51,15 +51,50 @@ function Document() {
         lang: "en",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$document$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Head"], {
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("link", {
-                    rel: "icon",
-                    href: "/thunder.svg"
-                }, void 0, false, {
-                    fileName: "[project]/Desi-Ngl/pages/_document.js",
-                    lineNumber: 7,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("link", {
+                        rel: "icon",
+                        href: "/thunder.svg"
+                    }, void 0, false, {
+                        fileName: "[project]/Desi-Ngl/pages/_document.js",
+                        lineNumber: 7,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("style", {
+                        children: `
+                  @keyframes pulse-reaction {
+                    0% {
+                      transform: scale(0.8) rotate(-10deg);
+                      opacity: 1;
+                    }
+                    50% {
+                      transform: scale(1.15) rotate(5deg);
+                    }
+                    100% {
+                      transform: scale(1) rotate(0deg);
+                      opacity: 1;
+                    }
+                  }
+
+                  @keyframes glow-hover {
+                    0% {
+                      box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+                    }
+                    70% {
+                      box-shadow: 0 0 0 8px rgba(139, 92, 246, 0);
+                    }
+                    100% {
+                      box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+                    }
+                  }
+                `
+                    }, void 0, false, {
+                        fileName: "[project]/Desi-Ngl/pages/_document.js",
+                        lineNumber: 8,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/_document.js",
                 lineNumber: 6,
                 columnNumber: 13
@@ -68,18 +103,18 @@ function Document() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$document$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["Main"], {}, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 10,
+                        lineNumber: 37,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$document$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["NextScript"], {}, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/_document.js",
-                        lineNumber: 11,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/_document.js",
-                lineNumber: 9,
+                lineNumber: 36,
                 columnNumber: 13
             }, this)
         ]

@@ -1,35 +1,12 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import axios from 'axios'
-import toast from 'react-hot-toast'
-import { Zap, Send, Link as LinkIcon, MessageCircle, Shield, Ghost, Sparkles, ChevronDown, Github, Linkedin, Instagram, TrendingUp } from 'lucide-react'
+import { Zap, Link as LinkIcon, MessageCircle, Shield, Ghost, Sparkles, ChevronDown, Github, Linkedin, Instagram, TrendingUp } from 'lucide-react'
 import Footer from '../components/Footer'
 
 export default function Home() {
-  const [username, setUsername] = useState('')
   const router = useRouter()
-  const [loading, setLoading] = useState(false)
   const [faqOpen, setFaqOpen] = useState(null)
-
-  async function usernameSend() {
-    const name = username.trim()
-    if (!name) return toast.error('Please enter a username.')
-    setLoading(true)
-    try {
-      const res = await axios.post('/api/username', { username: name })
-      if (res?.data?.token) {
-        localStorage.setItem('username', name)
-        localStorage.setItem('token', res.data.token)
-        router.push(`/link/${encodeURIComponent(name)}`)
-        toast.success('Link created successfully!')
-      }
-    } catch (e) {
-      toast.error('Error: ' + (e?.response?.data?.error || e.message))
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const features = [
     { icon: <Shield size={32} className="text-gradient-primary" />, title: 'Privacy First', desc: 'Encrypted from end-to-end. Your data stays yours, and your secrets stay secret.' },
@@ -42,7 +19,6 @@ export default function Home() {
 
   const faqs = [
     { q: 'Is it really anonymous?', a: 'Yes! We only store what is necessary. Your IP and identity are never shared unless you explicitly choose to "Reveal Identity".' },
-    { q: 'What are Premium Hints?', a: 'Pro members see hints like the sender\'s State/City, device (iPhone/Android), and even their vibe based on time-of-day.' },
     { q: 'How do I reveal my identity?', a: 'After a receiver replies to your secret, you\'ll see a prompt on your status page to stay anonymous or reveal yourself.' },
     { q: 'How do I share on Instagram?', a: 'Copy your link, use the "Link" sticker on Instagram, and wait for the secrets to roll in!' },
   ]
@@ -139,76 +115,136 @@ export default function Home() {
         </div>
 
         <div className="animate-fade-in" style={{
-          background: 'var(--glass-bg)',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid var(--glass-border)',
-          borderRadius: '32px',
-          padding: '40px',
-          width: '100%',
-          maxWidth: '500px',
-          boxShadow: '0 20px 40px var(--shadow-color)',
-          animationDelay: '0.2s',
-          position: 'relative'
+          animationDelay: '0.2s'
         }}>
-          {/* Floating Sticker */}
-          <div className="animate-float hero-sticker" style={{ position: 'absolute', top: '-30px', right: '-20px', background: '#FF4500', padding: '10px 20px', borderRadius: '12px', transform: 'rotate(10deg)', boxShadow: '0 10px 20px rgba(0,0,0,0.3)', fontWeight: 'bold', zIndex: 10 }}>
-            🔥 It's Viral
-          </div>
-
-          <h2 style={{ margin: '0 0 24px 0', fontSize: '24px' }}>Claim your unique link</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-            <div style={{ position: 'relative' }}>
-              <span style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }}>@</span>
-              <input
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-                placeholder="instagram_handle"
-                style={{
-                  width: '100%',
-                  padding: '18px 18px 18px 40px',
-                  borderRadius: '16px',
-                  border: '1px solid var(--glass-border)',
-                  background: 'var(--surface-color)',
-                  color: 'var(--text-primary)',
-                  fontSize: '16px',
-                  outline: 'none',
-                  fontFamily: 'var(--font-main)',
-                  transition: 'border-color 0.2s'
-                }}
-                onFocus={e => e.target.style.borderColor = 'var(--accent-purple)'}
-                onBlur={e => e.target.style.borderColor = 'var(--glass-border)'}
-              />
-            </div>
-            <button
-              onClick={usernameSend}
-              disabled={loading}
-              style={{
-                padding: '18px',
-                width: '100%',
-                background: 'var(--accent-purple)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '16px',
-                fontSize: '18px',
-                fontWeight: 700,
-                opacity: loading ? 0.7 : 1,
-                transition: 'all 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-                boxShadow: '0 10px 20px rgba(138, 43, 226, 0.3)'
-              }}
-              onMouseEnter={e => !loading && (e.currentTarget.style.transform = 'translateY(-2px)')}
-              onMouseLeave={e => !loading && (e.currentTarget.style.transform = 'translateY(0)')}
-              onMouseDown={e => !loading && (e.currentTarget.style.transform = 'scale(0.98)')}
-            >
-              {loading ? 'Creating...' : <>Get My Link <Zap size={20} fill="currentColor" /></>}
-            </button>
-          </div>
+          <button
+            onClick={() => router.push('/claim')}
+            style={{
+              padding: '18px 48px',
+              background: 'var(--accent-purple)',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '16px',
+              fontSize: '18px',
+              fontWeight: 700,
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              boxShadow: '0 10px 20px rgba(138, 43, 226, 0.3)',
+              minWidth: '280px'
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+            onMouseDown={e => e.currentTarget.style.transform = 'scale(0.98)'}
+          >
+            Claim Your Link <Zap size={20} fill="currentColor" />
+          </button>
         </div>
 
       </main>
+
+      {/* Product Hunt Achievement Section */}
+      <section style={{ padding: '80px 20px 40px', position: 'relative' }}>
+        <div className="container" style={{ maxWidth: '1100px', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '30px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, marginBottom: '16px', background: 'linear-gradient(135deg, #CCFF00 0%, #8A2BE2 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              🏆 Featured on Product Hunt
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '16px', maxWidth: '500px', margin: '0 auto' }}>
+              Join thousands of users who trust DesiNGL for their anonymous conversations
+            </p>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '20px',
+            flexWrap: 'wrap'
+          }}>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '40px',
+              background: 'var(--glass-bg)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid var(--glass-border)',
+              borderRadius: '24px',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = 'var(--accent-purple)';
+                e.currentTarget.style.boxShadow = '0 15px 40px rgba(138, 43, 226, 0.2)';
+                e.currentTarget.style.transform = 'translateY(-5px)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'var(--glass-border)';
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <a
+                href="https://www.producthunt.com/products/desi-ngl?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-desi-ngl"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex', textDecoration: 'none' }}
+              >
+                <img
+                  alt="Desi-Ngl - Tell Truths. Reveal Vibes. & Open Source | Product Hunt"
+                  width="250"
+                  height="54"
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1060745&theme=dark&t=1768220830773"
+                  style={{ borderRadius: '8px' }}
+                />
+              </a>
+            </div>
+
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '40px',
+              background: 'var(--glass-bg)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid var(--glass-border)',
+              borderRadius: '24px',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = 'var(--accent-lime)';
+                e.currentTarget.style.boxShadow = '0 15px 40px rgba(204, 255, 0, 0.2)';
+                e.currentTarget.style.transform = 'translateY(-5px)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'var(--glass-border)';
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <a
+                href="https://www.producthunt.com/products/desi-ngl/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-desi-ngl"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex', textDecoration: 'none' }}
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1147247&theme=dark"
+                  alt="Desi-Ngl - Tell Truths. Reveal Vibes. & Open Source | Product Hunt"
+                  style={{ borderRadius: '8px', width: '250px', height: '54px' }}
+                  width="250"
+                  height="54"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <section style={{ padding: '120px 20px', position: 'relative' }}>

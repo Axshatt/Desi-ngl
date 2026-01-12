@@ -26,21 +26,17 @@ if (mongoose.connection.readyState === 0) {
 }
 const userSchema = new Schema({
     username: String,
-    stripeCustomerId: {
-        type: String,
-        default: null
-    },
-    subscriptionStatus: {
-        type: String,
-        default: 'free'
-    },
-    subscriptionId: {
-        type: String,
-        default: null
-    },
-    subscriptionEndDate: {
+    createdAt: {
         type: Date,
-        default: null
+        default: Date.now
+    }
+});
+const replySchema = new Schema({
+    reply: String,
+    repliedBy: String,
+    repliedAt: {
+        type: Date,
+        default: Date.now
     }
 });
 const messageSchema = new Schema({
@@ -49,7 +45,49 @@ const messageSchema = new Schema({
         type: String,
         default: 'Serious'
     },
-    userId: ObjectId
+    userId: ObjectId,
+    // Unique token for sender to view their message and replies
+    senderToken: {
+        type: String,
+        unique: true,
+        sparse: true
+    },
+    // Dynamic reactions - can accept any emoji as key
+    reactions: {
+        type: Schema.Types.Mixed,
+        default: {}
+    },
+    // Replies from the message receiver
+    replies: [
+        replySchema
+    ],
+    // Optional sender metadata if they choose to share hints
+    senderMeta: {
+        share: {
+            type: Boolean,
+            default: false
+        },
+        ip: {
+            type: String,
+            default: null
+        },
+        deviceType: {
+            type: String,
+            default: null
+        },
+        os: {
+            type: String,
+            default: null
+        },
+        userAgent: {
+            type: String,
+            default: null
+        }
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 // Prevent model overwrite error in dev mode
 if (mongoose.models.users) delete mongoose.models.users;
@@ -68,19 +106,20 @@ __turbopack_context__.s([
     "default",
     ()=>handler
 ]);
-const { userModal, messageModal } = __turbopack_context__.r("[project]/Desi-Ngl/db.js [api] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$db$2e$js__$5b$api$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/db.js [api] (ecmascript)");
+;
 async function handler(req, res) {
     const user = req.query.user;
     if (req.method === 'POST') {
         try {
-            const u = await userModal.findOne({
+            const u = await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$db$2e$js__$5b$api$5d$__$28$ecmascript$29$__["userModal"].findOne({
                 username: user
             });
             if (!u) return res.status(404).json({
                 message: []
             });
             // Sort by newest first (ObjectId has timestamp, so sorting by _id desc works)
-            const messages = await messageModal.find({
+            const messages = await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$db$2e$js__$5b$api$5d$__$28$ecmascript$29$__["messageModal"].find({
                 userId: u._id
             }).sort({
                 _id: -1
@@ -100,7 +139,7 @@ async function handler(req, res) {
             error: 'Message ID required'
         });
         try {
-            await messageModal.findByIdAndDelete(id);
+            await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$db$2e$js__$5b$api$5d$__$28$ecmascript$29$__["messageModal"].findByIdAndDelete(id);
             return res.status(200).json({
                 success: true
             });

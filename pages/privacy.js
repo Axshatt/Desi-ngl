@@ -52,10 +52,10 @@ export default function Privacy() {
                         <div style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', padding: '30px', borderRadius: '24px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
                                 <Database size={24} className="text-gradient-primary" />
-                                <h3 style={{ margin: 0, fontSize: '20px' }}>Premium Features</h3>
+                                <h3 style={{ margin: 0, fontSize: '20px' }}>Optional Hints</h3>
                             </div>
                             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8 }}>
-                                For Pro members, we provide hints (like device type or city). This data is processed in real-time and is subject to the sender's choice to reveal hints.
+                                Senders can optionally choose to share hints (like device type or location). This data is processed in real-time and is subject to the sender's explicit choice to reveal hints.
                             </p>
                         </div>
                     </div>

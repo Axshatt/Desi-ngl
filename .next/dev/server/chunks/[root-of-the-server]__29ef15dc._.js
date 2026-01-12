@@ -41,6 +41,22 @@ const userSchema = new Schema({
     subscriptionEndDate: {
         type: Date,
         default: null
+    },
+    razorpayOrderId: {
+        type: String,
+        default: null
+    },
+    razorpayPaymentId: {
+        type: String,
+        default: null
+    }
+});
+const replySchema = new Schema({
+    reply: String,
+    repliedBy: String,
+    repliedAt: {
+        type: Date,
+        default: Date.now
     }
 });
 const messageSchema = new Schema({
@@ -49,7 +65,43 @@ const messageSchema = new Schema({
         type: String,
         default: 'Serious'
     },
-    userId: ObjectId
+    userId: ObjectId,
+    // Dynamic reactions - can accept any emoji as key
+    reactions: {
+        type: Schema.Types.Mixed,
+        default: {}
+    },
+    // Replies from the message receiver
+    replies: [
+        replySchema
+    ],
+    // Optional sender metadata if they choose to share hints
+    senderMeta: {
+        share: {
+            type: Boolean,
+            default: false
+        },
+        ip: {
+            type: String,
+            default: null
+        },
+        deviceType: {
+            type: String,
+            default: null
+        },
+        os: {
+            type: String,
+            default: null
+        },
+        userAgent: {
+            type: String,
+            default: null
+        }
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 // Prevent model overwrite error in dev mode
 if (mongoose.models.users) delete mongoose.models.users;
@@ -74,7 +126,7 @@ async function handler(req, res) {
     const username = req.query.username;
     if (method === 'POST') {
         try {
-            const { message, mood = 'Serious' } = req.body;
+            const { message, mood = 'Serious', shareMeta = false } = req.body;
             if (!message) return res.status(400).json({
                 error: 'message required'
             });
@@ -84,10 +136,38 @@ async function handler(req, res) {
             if (!user) return res.status(404).json({
                 error: 'User not found'
             });
+            // Basic IP + device detection (for optional sender hints)
+            const xff = req.headers['x-forwarded-for'];
+            const ip = Array.isArray(xff) ? xff[0] : typeof xff === 'string' ? xff.split(',')[0].trim() : req.socket?.remoteAddress || null;
+            const ua = req.headers['user-agent'] || '';
+            let deviceType = 'Unknown';
+            if (/mobile|iphone|android/i.test(ua)) {
+                deviceType = 'Mobile';
+            } else if (/ipad|tablet/i.test(ua)) {
+                deviceType = 'Tablet';
+            } else if (ua) {
+                deviceType = 'Desktop';
+            }
+            let os = null;
+            if (/Windows/i.test(ua)) os = 'Windows';
+            else if (/Mac OS X/i.test(ua)) os = 'macOS';
+            else if (/Android/i.test(ua)) os = 'Android';
+            else if (/iPhone|iPad|iPod/i.test(ua)) os = 'iOS';
+            else if (/Linux/i.test(ua)) os = 'Linux';
+            const senderMeta = {
+                share: !!shareMeta
+            };
+            if (shareMeta) {
+                senderMeta.ip = ip || null;
+                senderMeta.deviceType = deviceType;
+                senderMeta.os = os;
+                senderMeta.userAgent = ua || null;
+            }
             await messageModal.create({
                 message,
                 mood,
-                userId: user._id
+                userId: user._id,
+                senderMeta
             });
             return res.status(200).json({
                 msg: message

@@ -500,6 +500,8 @@ function AdminMessages() {
     const [refreshing, setRefreshing] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [deleteId, setDeleteId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [sharingMsg, setSharingMsg] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [reactingId, setReactingId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [hoveredReaction, setHoveredReaction] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
     async function fetchMsgs(isRefresh = false) {
         const u = username || localStorage.getItem('username');
         if (!u) return;
@@ -583,6 +585,27 @@ function AdminMessages() {
         localStorage.clear();
         router.push('/');
     }
+    async function addReaction(messageId, emoji) {
+        setReactingId(messageId);
+        const username = localStorage.getItem('username');
+        try {
+            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].post('/api/message/reaction', {
+                messageId,
+                reaction: emoji,
+                username
+            });
+            // Update the local message with new reaction counts
+            setMessages((prev)=>prev.map((m)=>m._id === messageId ? {
+                        ...m,
+                        reactions: res.data.reactions
+                    } : m));
+            __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success(res.data.userReacted ? `Added ${emoji}!` : `Removed ${emoji}`);
+        } catch (error) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error('Failed to add reaction');
+        } finally{
+            setReactingId(null);
+        }
+    }
     const downloadStory = async (msg)=>{
         setSharingMsg(msg);
         // Wait for render
@@ -660,12 +683,12 @@ function AdminMessages() {
                                 color: "#ff4444"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 157,
+                                lineNumber: 177,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 147,
+                            lineNumber: 167,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -677,7 +700,7 @@ function AdminMessages() {
                             children: "Delete Secret?"
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 159,
+                            lineNumber: 179,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -688,7 +711,7 @@ function AdminMessages() {
                             children: "Are you sure you want to delete this message? This action cannot be undone."
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 160,
+                            lineNumber: 180,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -712,7 +735,7 @@ function AdminMessages() {
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                    lineNumber: 164,
+                                    lineNumber: 184,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -729,24 +752,24 @@ function AdminMessages() {
                                     children: "Delete"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                    lineNumber: 178,
+                                    lineNumber: 198,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 163,
+                            lineNumber: 183,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                    lineNumber: 137,
+                    lineNumber: 157,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 124,
+                lineNumber: 144,
                 columnNumber: 9
             }, this),
             sharingMsg && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -777,7 +800,7 @@ function AdminMessages() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 214,
+                        lineNumber: 234,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -801,12 +824,12 @@ function AdminMessages() {
                                     fill: "white"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                    lineNumber: 218,
+                                    lineNumber: 238,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 217,
+                                lineNumber: 237,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -824,19 +847,19 @@ function AdminMessages() {
                                         children: "NGL"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 221,
+                                        lineNumber: 241,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 220,
+                                lineNumber: 240,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 216,
+                        lineNumber: 236,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -871,7 +894,7 @@ function AdminMessages() {
                                         color: "#fff"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 248,
+                                        lineNumber: 268,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -883,13 +906,13 @@ function AdminMessages() {
                                         children: "Anonymous"
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 249,
+                                        lineNumber: 269,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 239,
+                                lineNumber: 259,
                                 columnNumber: 13
                             }, this),
                             sharingMsg.mood && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -907,7 +930,7 @@ function AdminMessages() {
                                 children: sharingMsg.mood
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 253,
+                                lineNumber: 273,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -926,13 +949,13 @@ function AdminMessages() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 268,
+                                lineNumber: 288,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 225,
+                        lineNumber: 245,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -951,7 +974,7 @@ function AdminMessages() {
                                 children: "Send me a secret message! 🤫"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 281,
+                                lineNumber: 301,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -967,19 +990,19 @@ function AdminMessages() {
                                 children: "Link in Bio 🔗"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 284,
+                                lineNumber: 304,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 280,
+                        lineNumber: 300,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 199,
+                lineNumber: 219,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1013,13 +1036,13 @@ function AdminMessages() {
                                 children: messages.length
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 301,
+                                lineNumber: 321,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 300,
+                        lineNumber: 320,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1054,14 +1077,14 @@ function AdminMessages() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 322,
+                                        lineNumber: 342,
                                         columnNumber: 13
                                     }, this),
                                     "Refresh"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 305,
+                                lineNumber: 325,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1083,26 +1106,26 @@ function AdminMessages() {
                                         size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 343,
+                                        lineNumber: 363,
                                         columnNumber: 13
                                     }, this),
                                     " Logout"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 328,
+                                lineNumber: 348,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 303,
+                        lineNumber: 323,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 299,
+                lineNumber: 319,
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1114,7 +1137,7 @@ function AdminMessages() {
                 children: "Loading secrets..."
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 349,
+                lineNumber: 369,
                 columnNumber: 9
             }, this) : messages.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -1136,19 +1159,19 @@ function AdminMessages() {
                             color: "var(--text-secondary)"
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 353,
+                            lineNumber: 373,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 352,
+                        lineNumber: 372,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "No confessions yet!"
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 355,
+                        lineNumber: 375,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1158,13 +1181,13 @@ function AdminMessages() {
                         children: "Share your link to get started."
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 356,
+                        lineNumber: 376,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 351,
+                lineNumber: 371,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -1220,12 +1243,12 @@ function AdminMessages() {
                                                     size: 16
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                    lineNumber: 400,
+                                                    lineNumber: 420,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 390,
+                                                lineNumber: 410,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1236,13 +1259,13 @@ function AdminMessages() {
                                                 children: "Anonymous"
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 402,
+                                                lineNumber: 422,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 389,
+                                        lineNumber: 409,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1259,13 +1282,13 @@ function AdminMessages() {
                                         children: m.mood || 'Secret'
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 404,
+                                        lineNumber: 424,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 381,
+                                lineNumber: 401,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1281,7 +1304,7 @@ function AdminMessages() {
                                 children: m.message
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 419,
+                                lineNumber: 439,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1297,33 +1320,75 @@ function AdminMessages() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
                                             display: 'flex',
-                                            gap: '8px'
+                                            gap: '8px',
+                                            alignItems: 'center'
                                         },
                                         children: [
                                             '🔥',
                                             '❤️',
                                             '😂'
-                                        ].map((emoji, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        ].map((emoji, i)=>{
+                                            const username = ("TURBOPACK compile-time truthy", 1) ? localStorage.getItem('username') : "TURBOPACK unreachable";
+                                            const userReacted = m.reactions?.[emoji]?.includes(username) || false;
+                                            const reactionCount = m.reactions?.[emoji]?.length || 0;
+                                            const isHovered = hoveredReaction === `${m._id}-${emoji}`;
+                                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>addReaction(m._id, emoji),
+                                                onMouseEnter: ()=>setHoveredReaction(`${m._id}-${emoji}`),
+                                                onMouseLeave: ()=>setHoveredReaction(null),
+                                                disabled: reactingId === m._id,
                                                 style: {
-                                                    background: 'transparent',
-                                                    border: 'none',
-                                                    fontSize: '18px',
-                                                    cursor: 'pointer',
-                                                    padding: '4px',
-                                                    borderRadius: '50%',
-                                                    transition: 'transform 0.1s'
+                                                    background: userReacted ? 'rgba(139, 92, 246, 0.3)' : isHovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.05)',
+                                                    border: userReacted ? '1px solid var(--accent-purple)' : isHovered ? '1px solid rgba(139, 92, 246, 0.5)' : '1px solid rgba(255,255,255,0.1)',
+                                                    fontSize: '16px',
+                                                    cursor: reactingId === m._id ? 'wait' : 'pointer',
+                                                    padding: '6px 10px',
+                                                    borderRadius: '8px',
+                                                    transition: 'all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '4px',
+                                                    color: userReacted ? 'var(--accent-purple)' : isHovered ? 'var(--accent-purple)' : '#fff',
+                                                    fontWeight: 600,
+                                                    fontSize: '12px',
+                                                    animation: reactingId === m._id ? 'pulse-reaction 0.4s ease-out' : isHovered ? 'glow-hover 1s ease-in-out' : 'none',
+                                                    boxShadow: isHovered ? '0 0 12px rgba(139, 92, 246, 0.3)' : 'none'
                                                 },
-                                                onMouseDown: (e)=>e.currentTarget.style.transform = 'scale(0.8)',
-                                                onMouseUp: (e)=>e.currentTarget.style.transform = 'scale(1)',
-                                                children: emoji
-                                            }, i, false, {
+                                                onMouseDown: (e)=>!reactingId && (e.currentTarget.style.transform = 'scale(0.85)'),
+                                                onMouseUp: (e)=>!reactingId && (e.currentTarget.style.transform = 'scale(1)'),
+                                                title: `${userReacted ? 'Remove' : 'Add'} ${emoji}`,
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        style: {
+                                                            fontSize: isHovered ? '20px' : '16px',
+                                                            transition: 'font-size 0.2s'
+                                                        },
+                                                        children: emoji
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                        lineNumber: 495,
+                                                        columnNumber: 25
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        style: {
+                                                            minWidth: '16px'
+                                                        },
+                                                        children: reactionCount > 0 ? reactionCount : ''
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                        lineNumber: 496,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                ]
+                                            }, i, true, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 442,
-                                                columnNumber: 21
-                                            }, this))
+                                                lineNumber: 468,
+                                                columnNumber: 23
+                                            }, this);
+                                        })
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 440,
+                                        lineNumber: 460,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1356,13 +1421,13 @@ function AdminMessages() {
                                                         size: 14
                                                     }, void 0, false, {
                                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                        lineNumber: 479,
+                                                        lineNumber: 524,
                                                         columnNumber: 27
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 460,
+                                                lineNumber: 505,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1388,12 +1453,12 @@ function AdminMessages() {
                                                     size: 16
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                    lineNumber: 502,
+                                                    lineNumber: 547,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 482,
+                                                lineNumber: 527,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1415,45 +1480,45 @@ function AdminMessages() {
                                                     size: 16
                                                 }, void 0, false, {
                                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                    lineNumber: 521,
+                                                    lineNumber: 566,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 505,
+                                                lineNumber: 550,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 459,
+                                        lineNumber: 504,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 432,
+                                lineNumber: 452,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, m._id, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 365,
+                        lineNumber: 385,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 359,
+                lineNumber: 379,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-        lineNumber: 120,
+        lineNumber: 140,
         columnNumber: 5
     }, this);
 }
-_s(AdminMessages, "LQ7pn5cWFrRkubGXpD5MAr8Va+o=", false, function() {
+_s(AdminMessages, "iLmUUNFAW5nwoa0Y6PyO2Sq/IH4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

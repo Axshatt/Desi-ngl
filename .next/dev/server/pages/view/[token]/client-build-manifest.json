@@ -1,0 +1,5 @@
+{
+  "/view/[token]": [
+    "static/chunks/pages/view/[token].js"
+  ]
+}

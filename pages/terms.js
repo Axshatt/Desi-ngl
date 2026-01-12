@@ -18,7 +18,7 @@ export default function Terms() {
         {
             icon: <Lock size={24} className="text-gradient-primary" />,
             title: "3. Privacy & Data",
-            content: "We value your privacy. Your identity remains anonymous to the receiver. We do not sell your personal data. However, metadata may be used for service improvement and premium features."
+            content: "We value your privacy. Your identity remains anonymous to the receiver. We do not sell your personal data. However, metadata may be used for service improvement."
         },
         {
             icon: <FileText size={24} className="text-gradient-primary" />,

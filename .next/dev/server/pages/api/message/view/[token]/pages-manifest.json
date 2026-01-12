@@ -1,0 +1,3 @@
+{
+  "/api/message/view/[token]": "pages/api/message/view/[token].js"
+}

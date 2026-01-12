@@ -16,15 +16,33 @@ if (mongoose.connection.readyState === 0) {
 
 const userSchema = new Schema({
     username: String,
-    stripeCustomerId: { type: String, default: null },
-    subscriptionStatus: { type: String, default: 'free' }, // 'free', 'active', 'canceled', 'past_due'
-    subscriptionId: { type: String, default: null },
-    subscriptionEndDate: { type: Date, default: null }
+    createdAt: { type: Date, default: Date.now }
 })
+const replySchema = new Schema({
+    reply: String,
+    repliedBy: String, // username of the person replying
+    repliedAt: { type: Date, default: Date.now }
+})
+
 const messageSchema = new Schema({
     message: String,
     mood: { type: String, default: 'Serious' },
-    userId: ObjectId
+    userId: ObjectId,
+    // Unique token for sender to view their message and replies
+    senderToken: { type: String, unique: true, sparse: true },
+    // Dynamic reactions - can accept any emoji as key
+    reactions: { type: Schema.Types.Mixed, default: {} },
+    // Replies from the message receiver
+    replies: [replySchema],
+    // Optional sender metadata if they choose to share hints
+    senderMeta: {
+        share: { type: Boolean, default: false },
+        ip: { type: String, default: null },
+        deviceType: { type: String, default: null },
+        os: { type: String, default: null },
+        userAgent: { type: String, default: null }
+    },
+    createdAt: { type: Date, default: Date.now }
 })
 
 // Prevent model overwrite error in dev mode

@@ -10,15 +10,11 @@ export default function FAQ() {
     const faqs = [
         {
             q: "Is it really 100% anonymous?",
-            a: "Yes! We do not store IP addresses or any identifiable data of the sender. The receiver will never know who you are unless you explicitly choose to reveal your identity via a Premium Hint."
+            a: "Yes! We do not store IP addresses or any identifiable data of the sender. The receiver will never know who you are unless you explicitly choose to share hints when sending a message."
         },
         {
             q: "How do I share my link on Instagram?",
             a: "Go to your dashboard, copy your unique Link, and then open Instagram Story. Use the 'Link' sticker and paste your Desi-Ngl URL there. Easy!"
-        },
-        {
-            q: "What are 'Premium Hints'?",
-            a: "Pro members can see subtle hints like the sender's city/state, their device type (e.g., iPhone), and the time of day they sent the message. It's the ultimate 'vibe check'!"
         },
         {
             q: "Can I block someone?",
@@ -99,11 +95,6 @@ export default function FAQ() {
                     </div>
 
                     <div style={{ marginTop: '80px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
-                        <div style={{ textAlign: 'center', padding: '30px', background: 'var(--glass-bg)', borderRadius: '24px', border: '1px solid var(--glass-border)' }}>
-                            <Zap size={32} className="text-gradient-primary" style={{ marginBottom: '15px' }} />
-                            <h4 style={{ margin: 0 }}>Pro Plan</h4>
-                            <p style={{ fontSize: '14px', color: 'var(--text-secondary)' }}>Learn about upgrades</p>
-                        </div>
                         <div style={{ textAlign: 'center', padding: '30px', background: 'var(--glass-bg)', borderRadius: '24px', border: '1px solid var(--glass-border)' }}>
                             <Shield size={32} className="text-gradient-primary" style={{ marginBottom: '15px' }} />
                             <h4 style={{ margin: 0 }}>Safety</h4>
