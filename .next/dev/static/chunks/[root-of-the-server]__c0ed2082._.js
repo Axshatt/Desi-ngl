@@ -479,8 +479,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$log$2d$out$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LogOut$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/log-out.js [client] (ecmascript) <export default as LogOut>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$inbox$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Inbox$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/inbox.js [client] (ecmascript) <export default as Inbox>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/user.js [client] (ecmascript) <export default as User>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$share$2d$2$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Share2$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/share-2.js [client] (ecmascript) <export default as Share2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/download.js [client] (ecmascript) <export default as Download>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/lucide-react/dist/esm/icons/zap.js [client] (ecmascript) <export default as Zap>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$html$2d$to$2d$image$2f$es$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Desi-Ngl/node_modules/html-to-image/es/index.js [client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 ;
@@ -494,6 +499,9 @@ function AdminMessages() {
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const [refreshing, setRefreshing] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [deleteId, setDeleteId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [sharingMsg, setSharingMsg] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [reactingId, setReactingId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [hoveredReaction, setHoveredReaction] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
     async function fetchMsgs(isRefresh = false) {
         const u = username || localStorage.getItem('username');
         if (!u) return;
@@ -577,6 +585,51 @@ function AdminMessages() {
         localStorage.clear();
         router.push('/');
     }
+    async function addReaction(messageId, emoji) {
+        setReactingId(messageId);
+        const username = localStorage.getItem('username');
+        try {
+            const res = await __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].post('/api/message/reaction', {
+                messageId,
+                reaction: emoji,
+                username
+            });
+            // Update the local message with new reaction counts
+            setMessages((prev)=>prev.map((m)=>m._id === messageId ? {
+                        ...m,
+                        reactions: res.data.reactions
+                    } : m));
+            __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success(res.data.userReacted ? `Added ${emoji}!` : `Removed ${emoji}`);
+        } catch (error) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error('Failed to add reaction');
+        } finally{
+            setReactingId(null);
+        }
+    }
+    const downloadStory = async (msg)=>{
+        setSharingMsg(msg);
+        // Wait for render
+        setTimeout(async ()=>{
+            const node = document.getElementById('story-card-capture');
+            if (node) {
+                try {
+                    const dataUrl = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$html$2d$to$2d$image$2f$es$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["toPng"])(node, {
+                        quality: 0.95,
+                        pixelRatio: 2
+                    });
+                    const link = document.createElement('a');
+                    link.download = `desi-ngl-story-${Date.now()}.png`;
+                    link.href = dataUrl;
+                    link.click();
+                    __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success('Story saved to gallery!');
+                } catch (err) {
+                    console.error(err);
+                    __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].error('Failed to generate image');
+                }
+                setSharingMsg(null); // Cleanup after capture
+            }
+        }, 100);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "container",
         style: {
@@ -630,12 +683,12 @@ function AdminMessages() {
                                 color: "#ff4444"
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 132,
+                                lineNumber: 177,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 122,
+                            lineNumber: 167,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -647,7 +700,7 @@ function AdminMessages() {
                             children: "Delete Secret?"
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 134,
+                            lineNumber: 179,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -658,7 +711,7 @@ function AdminMessages() {
                             children: "Are you sure you want to delete this message? This action cannot be undone."
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 135,
+                            lineNumber: 180,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -682,7 +735,7 @@ function AdminMessages() {
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                    lineNumber: 139,
+                                    lineNumber: 184,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -699,27 +752,261 @@ function AdminMessages() {
                                     children: "Delete"
                                 }, void 0, false, {
                                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                    lineNumber: 153,
+                                    lineNumber: 198,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 138,
+                            lineNumber: 183,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                    lineNumber: 112,
+                    lineNumber: 157,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 99,
+                lineNumber: 144,
+                columnNumber: 9
+            }, this),
+            sharingMsg && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                id: "story-card-capture",
+                style: {
+                    position: 'fixed',
+                    top: 0,
+                    left: '-1000vw',
+                    width: '1080px',
+                    height: '1920px',
+                    background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'Outfit, sans-serif',
+                    zIndex: -1
+                },
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: 'radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 70%)'
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                        lineNumber: 234,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            marginBottom: '60px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '15px',
+                            zIndex: 1
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    background: 'var(--accent-purple)',
+                                    padding: '15px',
+                                    borderRadius: '50%'
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
+                                    size: 48,
+                                    color: "white",
+                                    fill: "white"
+                                }, void 0, false, {
+                                    fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                    lineNumber: 238,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 237,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                style: {
+                                    fontSize: '64px',
+                                    fontWeight: 800,
+                                    color: 'white',
+                                    margin: 0,
+                                    letterSpacing: '-2px'
+                                },
+                                children: [
+                                    "Desi",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-gradient-primary",
+                                        children: "NGL"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                        lineNumber: 241,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 240,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                        lineNumber: 236,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            backdropFilter: 'blur(40px)',
+                            border: '2px solid rgba(255, 255, 255, 0.1)',
+                            borderRadius: '60px',
+                            padding: '80px 60px',
+                            width: '800px',
+                            minHeight: '600px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            boxShadow: '0 40px 100px rgba(0,0,0,0.5)',
+                            zIndex: 1
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    background: 'rgba(255,255,255,0.1)',
+                                    padding: '12px 30px',
+                                    borderRadius: '100px',
+                                    marginBottom: '40px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '15px'
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
+                                        size: 32,
+                                        color: "#fff"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                        lineNumber: 268,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        style: {
+                                            fontSize: '24px',
+                                            fontWeight: 600,
+                                            color: 'rgba(255,255,255,0.8)'
+                                        },
+                                        children: "Anonymous"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                        lineNumber: 269,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 259,
+                                columnNumber: 13
+                            }, this),
+                            sharingMsg.mood && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    background: 'var(--accent-purple)',
+                                    color: 'white',
+                                    padding: '10px 30px',
+                                    borderRadius: '100px',
+                                    fontSize: '20px',
+                                    fontWeight: 700,
+                                    marginBottom: '60px',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '2px'
+                                },
+                                children: sharingMsg.mood
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 273,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    fontSize: '48px',
+                                    fontWeight: 600,
+                                    color: 'white',
+                                    textAlign: 'center',
+                                    lineHeight: 1.4,
+                                    marginBottom: '40px'
+                                },
+                                children: [
+                                    '"',
+                                    sharingMsg.message,
+                                    '"'
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 288,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                        lineNumber: 245,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            marginTop: '80px',
+                            textAlign: 'center',
+                            zIndex: 1
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                style: {
+                                    fontSize: '32px',
+                                    color: 'rgba(255,255,255,0.6)',
+                                    margin: 0
+                                },
+                                children: "Send me a secret message! 🤫"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 301,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    marginTop: '20px',
+                                    background: 'rgba(255,255,255,0.1)',
+                                    padding: '20px 40px',
+                                    borderRadius: '20px',
+                                    fontSize: '28px',
+                                    fontWeight: 600,
+                                    color: 'var(--accent-purple)'
+                                },
+                                children: "Link in Bio 🔗"
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 304,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                        lineNumber: 300,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                lineNumber: 219,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "nav-container mobile-stack",
                 style: {
                     display: 'flex',
                     justifyContent: 'space-between',
@@ -749,13 +1036,13 @@ function AdminMessages() {
                                 children: messages.length
                             }, void 0, false, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 174,
+                                lineNumber: 321,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 173,
+                        lineNumber: 320,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -790,14 +1077,14 @@ function AdminMessages() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 195,
+                                        lineNumber: 342,
                                         columnNumber: 13
                                     }, this),
                                     "Refresh"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 178,
+                                lineNumber: 325,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -819,26 +1106,26 @@ function AdminMessages() {
                                         size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 216,
+                                        lineNumber: 363,
                                         columnNumber: 13
                                     }, this),
                                     " Logout"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 201,
+                                lineNumber: 348,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 176,
+                        lineNumber: 323,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 172,
+                lineNumber: 319,
                 columnNumber: 7
             }, this),
             loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -850,7 +1137,7 @@ function AdminMessages() {
                 children: "Loading secrets..."
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 222,
+                lineNumber: 369,
                 columnNumber: 9
             }, this) : messages.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -872,19 +1159,19 @@ function AdminMessages() {
                             color: "var(--text-secondary)"
                         }, void 0, false, {
                             fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                            lineNumber: 226,
+                            lineNumber: 373,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 225,
+                        lineNumber: 372,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "No confessions yet!"
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 228,
+                        lineNumber: 375,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -894,13 +1181,13 @@ function AdminMessages() {
                         children: "Share your link to get started."
                     }, void 0, false, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 229,
+                        lineNumber: 376,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 224,
+                lineNumber: 371,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -912,120 +1199,326 @@ function AdminMessages() {
                         style: {
                             background: 'var(--surface-color)',
                             border: '1px solid var(--glass-border)',
-                            padding: '24px',
-                            borderRadius: '20px',
+                            borderRadius: '24px',
                             boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
                             transition: 'transform 0.2s',
                             cursor: 'default',
-                            position: 'relative'
+                            position: 'relative',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            overflow: 'hidden'
                         },
                         onMouseEnter: (e)=>e.currentTarget.style.transform = 'translateY(-2px)',
                         onMouseLeave: (e)=>e.currentTarget.style.transform = 'translateY(0)',
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    fontSize: '18px',
-                                    lineHeight: '1.5',
-                                    color: 'var(--text-primary)',
-                                    whiteSpace: 'pre-wrap',
-                                    fontWeight: 500,
-                                    marginBottom: '40px'
-                                },
-                                children: m.message
-                            }, void 0, false, {
-                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 251,
-                                columnNumber: 15
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                style: {
-                                    position: 'absolute',
-                                    bottom: '20px',
-                                    right: '20px',
+                                    padding: '20px',
+                                    borderBottom: '1px solid var(--glass-border)',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    gap: '10px'
+                                    justifyContent: 'space-between',
+                                    background: 'rgba(255,255,255,0.02)'
                                 },
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
-                                            fontSize: '12px',
-                                            color: 'var(--text-secondary)',
                                             display: 'flex',
                                             alignItems: 'center',
-                                            gap: '4px'
+                                            gap: '10px'
                                         },
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
-                                                size: 12
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                style: {
+                                                    width: '32px',
+                                                    height: '32px',
+                                                    borderRadius: '50%',
+                                                    background: 'var(--accent-purple)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    color: 'white'
+                                                },
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
+                                                    size: 16
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                    lineNumber: 420,
+                                                    columnNumber: 21
+                                                }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                                lineNumber: 271,
+                                                lineNumber: 410,
                                                 columnNumber: 19
                                             }, this),
-                                            " Anonymous"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                style: {
+                                                    fontWeight: 700,
+                                                    fontSize: '14px'
+                                                },
+                                                children: "Anonymous"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                lineNumber: 422,
+                                                columnNumber: 19
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 270,
+                                        lineNumber: 409,
                                         columnNumber: 17
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>requestDelete(m._id),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
-                                            background: 'rgba(255, 0, 0, 0.1)',
-                                            color: '#ff4444',
-                                            border: 'none',
-                                            borderRadius: '50%',
-                                            width: '32px',
-                                            height: '32px',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            cursor: 'pointer',
-                                            fontSize: '14px',
-                                            transition: 'background 0.2s'
+                                            fontSize: '11px',
+                                            padding: '4px 10px',
+                                            borderRadius: '100px',
+                                            background: 'rgba(255,255,255,0.1)',
+                                            color: 'var(--text-secondary)',
+                                            fontWeight: 600,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.5px'
                                         },
-                                        title: "Delete message",
-                                        onMouseEnter: (e)=>e.currentTarget.style.background = 'rgba(255, 0, 0, 0.2)',
-                                        onMouseLeave: (e)=>e.currentTarget.style.background = 'rgba(255, 0, 0, 0.1)',
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                            size: 16
-                                        }, void 0, false, {
-                                            fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                            lineNumber: 293,
-                                            columnNumber: 19
-                                        }, this)
+                                        children: m.mood || 'Secret'
                                     }, void 0, false, {
                                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                        lineNumber: 273,
+                                        lineNumber: 424,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                                lineNumber: 262,
+                                lineNumber: 401,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    padding: '24px',
+                                    fontSize: '18px',
+                                    lineHeight: '1.6',
+                                    color: 'var(--text-primary)',
+                                    whiteSpace: 'pre-wrap',
+                                    fontWeight: 500,
+                                    flex: 1
+                                },
+                                children: m.message
+                            }, void 0, false, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 439,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    padding: '16px 20px',
+                                    borderTop: '1px solid var(--glass-border)',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    background: 'rgba(255,255,255,0.02)'
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            display: 'flex',
+                                            gap: '8px',
+                                            alignItems: 'center'
+                                        },
+                                        children: [
+                                            '🔥',
+                                            '❤️',
+                                            '😂'
+                                        ].map((emoji, i)=>{
+                                            const username = ("TURBOPACK compile-time truthy", 1) ? localStorage.getItem('username') : "TURBOPACK unreachable";
+                                            const userReacted = m.reactions?.[emoji]?.includes(username) || false;
+                                            const reactionCount = m.reactions?.[emoji]?.length || 0;
+                                            const isHovered = hoveredReaction === `${m._id}-${emoji}`;
+                                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>addReaction(m._id, emoji),
+                                                onMouseEnter: ()=>setHoveredReaction(`${m._id}-${emoji}`),
+                                                onMouseLeave: ()=>setHoveredReaction(null),
+                                                disabled: reactingId === m._id,
+                                                style: {
+                                                    background: userReacted ? 'rgba(139, 92, 246, 0.3)' : isHovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.05)',
+                                                    border: userReacted ? '1px solid var(--accent-purple)' : isHovered ? '1px solid rgba(139, 92, 246, 0.5)' : '1px solid rgba(255,255,255,0.1)',
+                                                    fontSize: '16px',
+                                                    cursor: reactingId === m._id ? 'wait' : 'pointer',
+                                                    padding: '6px 10px',
+                                                    borderRadius: '8px',
+                                                    transition: 'all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '4px',
+                                                    color: userReacted ? 'var(--accent-purple)' : isHovered ? 'var(--accent-purple)' : '#fff',
+                                                    fontWeight: 600,
+                                                    fontSize: '12px',
+                                                    animation: reactingId === m._id ? 'pulse-reaction 0.4s ease-out' : isHovered ? 'glow-hover 1s ease-in-out' : 'none',
+                                                    boxShadow: isHovered ? '0 0 12px rgba(139, 92, 246, 0.3)' : 'none'
+                                                },
+                                                onMouseDown: (e)=>!reactingId && (e.currentTarget.style.transform = 'scale(0.85)'),
+                                                onMouseUp: (e)=>!reactingId && (e.currentTarget.style.transform = 'scale(1)'),
+                                                title: `${userReacted ? 'Remove' : 'Add'} ${emoji}`,
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        style: {
+                                                            fontSize: isHovered ? '20px' : '16px',
+                                                            transition: 'font-size 0.2s'
+                                                        },
+                                                        children: emoji
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                        lineNumber: 495,
+                                                        columnNumber: 25
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        style: {
+                                                            minWidth: '16px'
+                                                        },
+                                                        children: reactionCount > 0 ? reactionCount : ''
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                        lineNumber: 496,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                ]
+                                            }, i, true, {
+                                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                lineNumber: 468,
+                                                columnNumber: 23
+                                            }, this);
+                                        })
+                                    }, void 0, false, {
+                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                        lineNumber: 460,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            display: 'flex',
+                                            gap: '10px'
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>{
+                                                    navigator.clipboard.writeText(`Check out this anonymous message I got on Desi-Ngl! \n\n"${m.message}"\n\nSend me one too!`);
+                                                    __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2d$hot$2d$toast$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].success('Copied for Story!');
+                                                },
+                                                style: {
+                                                    background: 'var(--text-primary)',
+                                                    color: 'var(--bg-color)',
+                                                    border: 'none',
+                                                    padding: '8px 16px',
+                                                    borderRadius: '12px',
+                                                    fontSize: '13px',
+                                                    fontWeight: 700,
+                                                    cursor: 'pointer',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    gap: '6px'
+                                                },
+                                                children: [
+                                                    "Reply ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$share$2d$2$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Share2$3e$__["Share2"], {
+                                                        size: 14
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                        lineNumber: 524,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                lineNumber: 505,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>downloadStory(m),
+                                                style: {
+                                                    background: 'rgba(255, 255, 255, 0.1)',
+                                                    color: '#fff',
+                                                    border: 'none',
+                                                    borderRadius: '50%',
+                                                    width: '32px',
+                                                    height: '32px',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    cursor: 'pointer',
+                                                    fontSize: '14px',
+                                                    transition: 'background 0.2s'
+                                                },
+                                                title: "Share to Story",
+                                                onMouseEnter: (e)=>e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)',
+                                                onMouseLeave: (e)=>e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)',
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
+                                                    size: 16
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                    lineNumber: 547,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                lineNumber: 527,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>requestDelete(m._id),
+                                                style: {
+                                                    background: 'rgba(255, 0, 0, 0.1)',
+                                                    color: '#ff4444',
+                                                    border: 'none',
+                                                    borderRadius: '12px',
+                                                    width: '32px',
+                                                    height: '32px',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    cursor: 'pointer'
+                                                },
+                                                title: "Delete message",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                                    size: 16
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                    lineNumber: 566,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                                lineNumber: 550,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                        lineNumber: 504,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
+                                lineNumber: 452,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, m._id, true, {
                         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                        lineNumber: 238,
+                        lineNumber: 385,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-                lineNumber: 232,
+                lineNumber: 379,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Desi-Ngl/pages/admin/message/[username].js",
-        lineNumber: 95,
+        lineNumber: 140,
         columnNumber: 5
     }, this);
 }
-_s(AdminMessages, "35uyi8OnXvBCYLX6b6EnPt8uI4w=", false, function() {
+_s(AdminMessages, "iLmUUNFAW5nwoa0Y6PyO2Sq/IH4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Desi$2d$Ngl$2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

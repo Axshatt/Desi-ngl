@@ -1,15 +1,69 @@
-[00:00:03.550] Server  LOG     ✓ Ready in 2.2s
-[00:00:13.503] Browser ERROR   unhandledRejection: ReferenceError: setIsSubscribed is not defined
-[00:00:17.046] Server  LOG     Connected to DB
-[00:00:59.959] Server  LOG     ✓ Compiled in 749ms
-[00:01:03.631] Server  LOG     ✓ Compiled in 1680ms
-[00:06:11.615] Server  WARN    ⚠ Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+[00:00:16.797] Server  LOG     ✓ Ready in 12.4s
+[00:00:26.000] Server  LOG     ○ Compiling /admin/super ...
+[00:00:46.640] Server  LOG     Connected to DB
+[00:00:57.998] Browser WARN    Message content not found, waiting longer...
+[00:00:59.525] Browser LOG     Capturing element: {"height":1920,"visible":"visible","width":1080}
+[00:04:24.091] Server  LOG     ✓ Compiled in 1560ms
+[00:04:59.488] Server  LOG     ✓ Compiled in 196ms
+[00:05:42.070] Server  LOG     ✓ Compiled in 175ms
+[00:06:59.559] Server  LOG     ✓ Compiled in 124ms
+[00:08:20.716] Server  LOG     ✓ Compiled in 720ms
+[00:10:18.610] Browser LOG     Refreshing page data due to server-side change
+[00:10:20.492] Server  LOG     ✓ Compiled in 4.4s
+[00:10:20.682] Browser ERROR   ./Desi-Ngl/pages/admin/super.js:723:1
+Parsing ecmascript source code failed
+  721 |     </div>
+  722 |   )
+> 723 | }
+      | ^
+  724 |
+  725 | function StatCard({ icon: Icon, label, value, change, color }) {
+  726 |   return (
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:10:44.486] Browser ERROR   ./Desi-Ngl/pages/admin/super.js:740:1
+Parsing ecmascript source code failed
+  738 |     </div>
+  739 |   )
+> 740 | }
+      | ^
+  741 |
+  742 | function StatCard({ icon: Icon, label, value, change, color }) {
+  743 |   return (
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:10:59.050] Browser ERROR   ./Desi-Ngl/pages/admin/super.js:800:1
+Parsing ecmascript source code failed
+  798 |     </div>
+  799 |   )
+> 800 | }
+      | ^
+  801 |
+  802 | function StatCard({ icon: Icon, label, value, change, color }) {
+  803 |   return (
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:11:20.025] Server  LOG     ✓ Compiled in 1755ms
+[00:11:20.446] Browser LOG     Refreshing page data due to server-side change
+[00:11:25.952] Server  LOG     ✓ Compiled in 347ms
+[00:13:06.122] Server  LOG       Reload env: .env
+[00:15:50.082] Browser LOG     Refreshing page data due to server-side change
+[00:15:50.268] Server  LOG     ✓ Compiled in 1469ms
+[00:15:50.341] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:16:01.178] Server  LOG     ✓ Compiled in 223ms
+[00:16:06.942] Server  LOG     ✓ Compiled in 1300ms
+[00:16:07.963] Browser LOG     Refreshing page data due to server-side change
+[00:17:18.992] Server  LOG     ✓ Compiled in 1169ms
+[00:17:26.659] Server  LOG     ✓ Compiled in 521ms
+[00:21:02.838] Server  WARN    ⚠ Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:06:19.091] Server  LOG     ✓ Compiled in 46ms
-[00:06:20.426] Browser LOG     Triggering auto-message for: axshat.in
-[00:06:20.543] Browser LOG     Triggering auto-message for: axshat.in
-[00:11:45.040] Browser LOG     Triggering auto-message for: axshat.in
-[01:02:56.152] Browser LOG     Triggering auto-message for: axshat.in
-[01:03:17.779] Server  ERROR   Auto-message error: Error: read ECONNRESET
-[01:03:18.557] Browser ERROR   Auto-message failed: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"data":"{\"username\":\"axshat.in\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/admin/auto-message","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/5c51d_axios_lib_5fd63821._.js:1954:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/5c51d_axios_lib_5fd63821._.js:2469:182)\n    at Axios.request (http://localhost:3000/_next/static/chunks/5c51d_axios_lib_5fd63821._.js:3273:49)\n    at async AdminMessages.useEffect.checkAndTriggerAutoMessage (http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__c0ed2082._.js?id=%255Bproject%255D%252FDesi-Ngl%252Fpages%252Fadmin%252Fmessage%252F%255Busername%255D.js+%255Bclient%255D+%2528ecmascript%2529:66:29)","status":500}
-[01:32:40.848] Browser LOG     Triggering auto-message for: axshat.in
+[00:22:22.535] Browser LOG     Triggering auto-message for: axshat
+[00:22:41.457] Browser WARN    Message content not found, waiting longer...
+[00:22:43.248] Browser LOG     Capturing element: {"height":1919.9998779296875,"visible":"visible","width":1079.9998779296875}
+[00:23:35.870] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'writeText')
+[00:24:49.056] Browser LOG     Triggering auto-message for: axshat.in

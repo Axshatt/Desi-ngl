@@ -1,0 +1,3 @@
+{
+  "/api/razorpay/webhook": "pages/api/razorpay/webhook.js"
+}

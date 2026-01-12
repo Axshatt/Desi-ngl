@@ -1,4 +1,4 @@
-const { userModal, messageModal } = require('../../../../db')
+import { userModal, messageModal } from '../../../../db'
 
 export default async function handler(req, res) {
   const user = req.query.user
