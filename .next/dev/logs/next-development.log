@@ -66,3 +66,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [00:22:41.457] Browser WARN    Message content not found, waiting longer...
 [00:22:43.248] Browser LOG     Capturing element: {"height":1919.9998779296875,"visible":"visible","width":1079.9998779296875}
 [00:23:35.870] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'writeText')
+[00:24:49.056] Browser LOG     Triggering auto-message for: axshat.in
